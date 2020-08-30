@@ -1,0 +1,16 @@
+include ../_mixins-links.pug
+
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		include ./_head.pug
+
+	body(class=pageClass)
+		.clear
+		include ../../sections/ui-kit/ui-nav.pug
+
+		block content
+
+		include ./_foot.pug

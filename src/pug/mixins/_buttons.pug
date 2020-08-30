@@ -1,0 +1,5 @@
+mixin button(text, link)
+    if link
+        a(class="button" href= link)&attributes(attributes) #{text}
+    else
+        a(class="button" href="#!")&attributes(attributes) #{text}

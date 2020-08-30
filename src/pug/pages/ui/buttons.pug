@@ -1,0 +1,26 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Кнопки
+
+            .section-ui
+                +button('Предыдущий пост')
+                +button('Опубликовать')(class="button--primary")
+            pre.
+                +button('Предыдущий пост', '#!')
+                +button('Опубликовать', '#!')(class="button--primary")
+            
+            .title mixins/_buttons.pug
+
+            pre.
+                mixin button(text, link)
+                    if link
+                        a(class="button" href= link)&attributes(attributes) \#{text}
+                    else
+                        a(class="button" href="#!")&attributes(attributes) \#{text}

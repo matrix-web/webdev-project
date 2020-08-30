@@ -1,0 +1,41 @@
+$buttonColor: $white;
+
+.button {
+    @include transition;
+    display: inline-block;
+    height: 44px;
+    border-radius: 22px;
+    background-color: #bbc7d3;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: .875em 1.25em .8125em;
+
+    color: $white;
+    font-family: $baseFont;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+
+    &:hover,
+    &:focus {
+        background-color: #dde8ee;
+    }
+
+    &:active {
+        background-color: #b4dff6;
+    }
+}
+
+.button--primary {
+    background-color: $blue;
+
+    &:hover,
+    &:focus {
+        background-color: #1b9ce7;
+    }
+
+    &:active {
+        background-color: #0067a3;
+    }
+}
