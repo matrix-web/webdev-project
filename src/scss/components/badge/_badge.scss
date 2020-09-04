@@ -1,7 +1,8 @@
 .badge {
+    display: inline-block;
     border-radius: 20px;
     background-color: #a0cce5;
-    padding: 8px 15px;
+    padding: 5.5px 15px;
 
     font-family: $baseFont;
     font-size: .8125rem;
@@ -10,9 +11,6 @@
     color: #fff;
     cursor: pointer;
     @include transition;
-    
-    // width: 126px;
-    // height: 26px;
 
     &:hover,
     &:focus {
