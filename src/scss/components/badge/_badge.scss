@@ -1,0 +1,37 @@
+.badge {
+    border-radius: 20px;
+    background-color: #a0cce5;
+    padding: 8px 15px;
+
+    font-family: $baseFont;
+    font-size: .8125rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #fff;
+    cursor: pointer;
+    @include transition;
+    
+    // width: 126px;
+    // height: 26px;
+
+    &:hover,
+    &:focus {
+        background-color:  #8dcff5;
+    }
+
+    &:active {
+        background-color: #6fb6df;
+    }
+}
+
+.badge--link {
+    text-decoration: none;
+}
+
+.badge--button {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
