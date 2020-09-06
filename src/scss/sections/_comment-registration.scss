@@ -1,0 +1,18 @@
+.comment-registration {
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: rgba(238, 240, 242, .5);
+    padding: 39px 0;
+}
+
+.comment-registration__text {
+    max-width: 329px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+}
