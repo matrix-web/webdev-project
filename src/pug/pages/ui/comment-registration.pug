@@ -1,0 +1,22 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const title = 'Комментарий-зарегистрироваться - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Комментарий-зарегистрироваться
+
+            .section-ui
+                include ../../sections\_comments-registration.pug
+            pre.
+                include ../sections/_comments-registration.pug
+            
+            .title sections/_comments-registration.pug
+
+            pre.
+                .comment-registration
+                    .comment-registration__text
+                        p \#[a(href="#!") Войдите] или \#[a(href="#!") зарегистрируйтесь] чтобы оставить комментарий
