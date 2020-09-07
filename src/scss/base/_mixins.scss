@@ -13,3 +13,8 @@
     -o-transition: box-shadow 0.2s ease-in;
     transition: box-shadow 0.2s ease-in;
 }
+
+@mixin button-paddings {
+    padding-top: 10.5px;
+    padding-bottom: 10.5px;
+}
