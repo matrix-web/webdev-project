@@ -1,0 +1,27 @@
+$fakeCheckboxBg:  #1e6791;
+
+.label-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    display: none;
+}
+
+.fake-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-color: $fakeCheckboxBg;
+    border-radius: 2px;
+    background-image: url('../img/checkbox/check.png');
+    background-repeat: no-repeat;
+    background-position: center -10px;
+    @include transition;
+}
+
+.checkbox:checked + .fake-checkbox {
+    background-position: center;
+}
