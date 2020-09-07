@@ -11,7 +11,7 @@ $ git clone https://github.com/matrix-web/webdev-project.git
 
 2. Переходим в созданную папку
 ```sh
-cd Ind-pug-less-task-project
+cd webdev-project
 ```
 
 3. Устанавливаем все зависимости
