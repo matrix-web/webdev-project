@@ -1,0 +1,43 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const title = 'Нотификации - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Нотификации
+
+            .section-ui
+                +notification("Запись создана успешно!", "success")(class="mb-20")
+                +notification("Комментарий не может быть пустым.", "error")(class="mt-20 mb-20")
+                +notification("Данный email уже занят.", "error", true)
+                .notification-description
+                    p Используйте другой email чтобы создать новый аккаунт.
+                    p Или воспользуйтесь #[a(href="#!") восстановлением пароля], чтобы войти на сайт.
+                +notification("Информация обновлена", "info")(class="mt-20")
+            pre.
+                +notification("Запись создана успешно!", "success")(class="mb-20")
+                +notification("Комментарий не может быть пустым.", "error")(class="mt-20 mb-20")
+                +notification("Данный email уже занят.", "error", true)
+                .notification-description
+                    p Используйте другой email чтобы создать новый аккаунт.
+                    p Или воспользуйтесь \#[a(href="#!") восстановлением пароля], чтобы войти на сайт.
+                +notification("Информация обновлена", "info")(class="mt-20")
+            
+            .title mixins/_notifications.pug
+            pre.
+                mixin notification(text, type="error", isInfo=false)
+                    if (type == 'success' && !isInfo)
+                        .notification(class=`notification--${type}`)&attributes(attributes) \#{text}
+                    else if (type == 'success' && isInfo)
+                        .notification(class=`notification--${type} notification--top-rounded`)&attributes(attributes) \#{text}
+                            if (block)
+                                block
+                    else if (type=="error" && isInfo)
+                        .notification(class=`notification--${type} notification--top-rounded`)&attributes(attributes) \#{text}
+                            if (block)
+                                block
+                    else
+                        .notification(class=`notification--${type}`)&attributes(attributes) \#{text}

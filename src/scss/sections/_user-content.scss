@@ -16,6 +16,11 @@ $textColor: #383737;
 		color: $textColor;
 		line-height: 2;
 		margin-bottom: 0.9em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 		a {
 			color: $active;
 		}
