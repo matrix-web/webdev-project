@@ -9,25 +9,30 @@ block content
         .container.container--left.user-content.pt-35
             h1 Карточки
 
-            section.card.card-blog
-                .card__img-blog
-                    img(src="../img/blog/preview/post-1.jpg", alt="Preview post")
-                .card__title.card__title--indents Поездка в New York пример длинного названия поста ...
-
-                
-
-            //- .section-ui
-            //-     +button('Предыдущий пост')
-            //-     +button('Опубликовать')(class="button--primary")
-            //- pre.
-            //-     +button('Предыдущий пост', '#!')
-            //-     +button('Опубликовать', '#!')(class="button--primary")
+            .section-ui
+                .row
+                    .col-6
+                        +cards("blog", "Поездка в New York пример длинного названия поста ...", "post-1", "post-1")
+                    .col-6
+                        +cards("portfolio", "Верстка Landing Page", "portfolio-1", "work preview")
+            pre.
+                +cards("blog", "Поездка в New York пример длинного названия поста ...", "post-1", "post-1")
+                +cards("portfolio", "Верстка Landing Page", "portfolio-1", "work preview")
             
-            //- .title mixins/_buttons.pug
+            .title mixins/_cards.pug
 
-            //- pre.
-            //-     mixin button(text, link)
-            //-         if link
-            //-             a(class="button" href= link)&attributes(attributes) \#{text}
-            //-         else
-            //-             a(class="button" href="#!")&attributes(attributes) \#{text}
+            pre.
+                mixin cards(type, title, img, altText, link="#")
+                    if (type == 'blog')
+                        .card.card-blog
+                            .card__img-blog
+                                img(src=`../img/blog/preview/${img}.jpg`, alt=altText)
+                            .card__title.card-blog--indents \#{title}
+                            +button("Читать", "primary", "default", link)(class="card--button-size")
+                    else if (type=="portfolio")
+                        .card.card-work
+                            .card__img-work
+                                img(src=`../img/portfolio/${img}.jpg`, alt=altText)
+                            .card-content
+                                .card__title.card-work--indents \#{title}
+                                +button("Смотреть кейс", "primary", "default", link)(class="card--button-size")
