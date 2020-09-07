@@ -1,0 +1,55 @@
+$borderColor: #b1bfc7;
+$white: #fff;
+$textColor: #383737;
+$borderColorFocus: #999;
+$labelColor: #222;
+
+.input {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #b1bfc7;
+    border-radius: 4px;
+    background-color: $white;
+    color: $textColor;
+    line-height: 1.5;
+    transition: border-color 0.2s ease-in, color 0.2s ease-in;
+
+    &::placeholder {
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.502);
+    }
+
+    &:focus,
+	&:active {
+		outline-style: none;
+		box-shadow: 0 0 0 3px rgba(139, 167, 197, 0.25);
+		border: 1px solid $borderColorFocus;
+	}
+}
+
+.label {
+    color: $labelColor;
+    line-height: 1;
+    font-weight: 700;
+
+    span {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.textarea {
+    width: 100%;
+    min-height: 158px;
+    border-radius: 4px;
+    border: 1px solid #b1bfc7;
+    background-color: $white;
+    padding: 15px;
+
+    &:focus,
+	&:active {
+		outline-style: none;
+		box-shadow: 0 0 0 3px rgba(139, 167, 197, 0.25);
+		border: 1px solid $borderColorFocus;
+	}
+}

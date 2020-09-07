@@ -1,0 +1,32 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const title = 'Поля ввода - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Поля ввода
+            
+            .section-ui
+                +inputField("text", "Поле для ввода", "name-field")(placeholder="Введите имя")
+                br
+                br
+                +textarea("message-box", "Сообщение - textarea")
+                    | Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов. 
+            pre.
+                +inputField("text", "Поле для ввода", "name-field")(placeholder="Введите имя")
+                +textarea("message-box", "Сообщение - textarea")
+            
+            .title mixins/_input.pug
+            pre.
+                mixin inputField(typeField="text", labelText, id="")
+                    label.label(for=id) \#[span \#{labelText}]
+                        input.input(id=id type=typeField)&attributes(attributes)
+            pre.
+                mixin textarea(id, labelText)
+                    label.label(for=id) \#[span \#{labelText}]
+                        textarea.textarea(id=id cols="30", rows="10" placeholder="Введите сообщение")&attributes(attributes)
+                            if (block)
+                                block
