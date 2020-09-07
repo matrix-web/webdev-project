@@ -9,10 +9,17 @@
 
 // Components
 @import './components/cards/cards';
+@import './components/forms/radio';
+@import './components/forms/forms';
+@import './components/forms/input';
+@import './components/notifications/notifications';
+@import "./components/avatar/avatar";
+@import './components/badge/badge';
+@import './components/buttons/buttons';
 
 // Sections
 @import './sections/user-content';
-
+@import './sections/comment-registration';
 
 // Utils - Always Last - !IMPORTANT
 @import './utils/margins';

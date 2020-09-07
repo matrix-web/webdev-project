@@ -1,0 +1,87 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const title = 'Типографика - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Типографика
+
+            .section-ui
+                .user-content
+                    div.title Заголовки
+                        h1 Заголовок 1
+                        h2 Заголовок 2
+                        h3 Заголовок 3
+                        h4 Заголовок 4
+                        h5 Заголовок 5
+                        h5 Заголовок 6
+                    p Парк находится в горах #[a(href='#!') Сьерра-Невада] на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.
+                    p Центром парка является долина #[a(href='#!') Йосемити], круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы.
+                    ul
+                        li Первый пункт
+                        li Второй пункт. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. 
+                        li Третий пункт
+            .title scss/sections/_user-content.scss
+
+            pre.
+                .user-content {
+
+                    h1 { font-size: 28px; font-weight: 900; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
+                    h2 { font-size: 26px; font-weight: 600; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
+                    h3 { font-size: 24px; font-weight: 900; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
+                    h4 { font-size: 20px; font-weight: 900; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
+                    h5 { font-size: 18px; font-weight: 900; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
+                    h6 { font-size: 16px; font-weight: 900; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
+
+                    p {
+                        color: $textColor;
+                        line-height: 2;
+                        margin-bottom: 0.9em;
+                        a {
+                            color: $active;
+                        }
+                    }
+
+                    hr {
+                        border: none;
+                        border-bottom: 1px solid #CDE2E8;
+                        margin: 30px 0;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        line-height: 1.5em;
+                    }
+
+                    li {
+                        position: relative;
+                        margin-bottom: 0.9em;
+
+                        &:before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            left: -20px;
+                            top: 10px;
+                            width: 6px;
+                            height: 6px;
+                            background-color: $active;
+                        }
+
+                    }
+                    
+                    &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, 
+                    &>.title-1, &>.title-2, &>.title-3, &>.title-4, &>.title-5, &>.title-6, &>.title {
+                        margin-top: 0;
+                    }
+                    
+                    // custom for comment-add.html
+                    h6.comment-add-block__right-title {
+                        margin-top: 0;
+                        margin-bottom: 10px;
+                    }
+                    
+                }// .user-content

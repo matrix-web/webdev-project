@@ -1,5 +1,31 @@
-mixin button(text, link)
-    if link
-        a(class="button" href= link)&attributes(attributes) #{text}
+mixin buttonWithIcon(text, type='primary', element='link', source='#!', size='default', ...iconSet)
+    if (element == 'button')
+        for set in iconSet
+            if (size == 'small')
+                button.button(class=`button--small button--${type}`)&attributes(attributes) #[span.button__icon(class=`button__icon--position-${set.iconPosition} button__icon--small`) #[i(class=set.iconClass)]] #[span #{text}]
+            else
+                if (type == 'profile')
+                    button.button(class=`button--${type}`)&attributes(attributes) #[span.button__icon(class=`button__icon--position-${set.iconPosition} button__icon--small`) #[i(class=set.iconClass)]] #[span #{text}]
+                else
+                    button.button(class=`button--${type}`)&attributes(attributes) #[span.button__icon(class=`button__icon--position-${set.iconPosition}`) #[i(class=set.iconClass)]] #[span #{text}]
     else
-        a(class="button" href="#!")&attributes(attributes) #{text}
+        for set in iconSet
+            if (size == 'small')
+                a.button(class=`button--small button--${type}` href=source)&attributes(attributes) #[span.button__icon(class=`button__icon--position-${set.iconPosition} button__icon--small`) #[i(class=set.iconClass)]] #[span #{text}]
+            else
+                if (type == 'profile')
+                    a.button(class=`button--${type}` href=source)&attributes(attributes) #[span.button__icon(class=`button__icon--position-${set.iconPosition} button__icon--small`) #[i(class=set.iconClass)]] #[span #{text}]
+                else
+                    a.button(class=`button--${type}` href=source)&attributes(attributes) #[span.button__icon(class=`button__icon--position-${set.iconPosition}`) #[i(class=set.iconClass)]] #[span #{text}]
+
+mixin button(text, type='primary', size='default', element='link', sourse='#!')
+    if (element == 'button')
+        if (size == 'small')
+            button.button(class=`button--small button--${type}`)&attributes(attributes) #{text}
+        else
+            button.button(class=`button--${type}`)&attributes(attributes) #{text}
+    else
+        if (size == 'small')
+            a.button(class=`button--small button--${type}` href=source)&attributes(attributes) #{text}
+        else
+            a.button(class=`button--${type}` href=source)&attributes(attributes) #{text}
