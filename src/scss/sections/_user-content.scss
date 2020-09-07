@@ -1,20 +1,20 @@
 $active: $blue;
-$titleColor: #000;
-$textColor: #000;
+$titleColor: #222;
+$textColor: #383737;
 
 
 .user-content {
 
-	h1 { font-size: 28px; font-weight: 900; margin: 1em 0 1em; color: $titleColor;}
-	h2 { font-size: 26px; font-weight: 600; margin: 1em 0 1em; color: $titleColor;}
-	h3 { font-size: 24px; font-weight: 900; margin: 1em 0 1em; color: $titleColor;}
-	h4 { font-size: 20px; font-weight: 900; margin: 1em 0 1em; color: $titleColor;}
-	h5 { font-size: 18px; font-weight: 900; margin: 1em 0 1em; color: $titleColor;}
-	h6 { font-size: 16px; font-weight: 900; margin: 1em 0 1em; }color: $titleColor;
+	h1 { font-size: 28px; font-weight: 900; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
+	h2 { font-size: 26px; font-weight: 600; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
+	h3 { font-size: 24px; font-weight: 900; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
+	h4 { font-size: 20px; font-weight: 900; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
+	h5 { font-size: 18px; font-weight: 900; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
+	h6 { font-size: 16px; font-weight: 900; margin: 1em 0 1em; color: $titleColor; line-height: 1.2;}
 
 	p {
 		color: $textColor;
-		line-height: 2em;
+		line-height: 2;
 		margin-bottom: 0.9em;
 
 		&:last-child {
@@ -50,14 +50,15 @@ $textColor: #000;
 			width: 6px;
 			height: 6px;
 			background-color: $active;
-		}//&:before
+		}
 
-	}// li
+	}
 	
 	&>h1, &>h2, &>h3, &>h4, &>h5, &>h6, 
 	&>.title-1, &>.title-2, &>.title-3, &>.title-4, &>.title-5, &>.title-6, &>.title {
 		margin-top: 0;
 	}
+	
 	// custom for comment-add.html
 	h6.comment-add-block__right-title {
 		margin-top: 0;

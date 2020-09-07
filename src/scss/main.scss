@@ -10,9 +10,13 @@
 // Components
 @import './components/cards/cards';
 @import './components/notifications/notifications';
+@import "./components/avatar/avatar";
+@import './components/badge/badge';
+@import './components/buttons/buttons';
 
 // Sections
 @import './sections/user-content';
+@import './sections/comment-registration';
 
 
 // Utils - Always Last - !IMPORTANT
