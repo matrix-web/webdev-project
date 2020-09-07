@@ -1,0 +1,5 @@
+mixin badge(type, text)
+    if (type == 'button')
+        button.badge&attributes(attributes) #{text}
+    else
+        a.badge(href='#!')&attributes(attributes) #{text}

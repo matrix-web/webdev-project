@@ -50,6 +50,7 @@ const paths = {
             bootstrapGrid: 'node_modules/bootstrap-4-grid/css/**/*.css',
             normalizeCss: 'node_modules/normalize.css/normalize.css',
             customScrollbar: './src/libs/**/*.*'
+            
         },
         dist: {
             jquery: './dist/libs/jquery',
@@ -62,8 +63,8 @@ const paths = {
 
 export { paths }
 
-export const development = series(clean, 
-    parallel([compilePug, processingStyles, processScripts, processingImages, sprites, fonts, copyLibs]),
+export const development = series(clean, copyLibs,
+    parallel([compilePug, processingStyles, processScripts, processingImages, sprites, fonts]),
     parallel(server)
 )
 
