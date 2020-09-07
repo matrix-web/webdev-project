@@ -1,0 +1,13 @@
+mixin notification(text, type="error", isInfo=false)
+    if (type == 'success' && !isInfo)
+        .notification(class=`notification--${type}`)&attributes(attributes) #{text}
+    else if (type == 'success' && isInfo)
+        .notification(class=`notification--${type} notification--top-rounded`)&attributes(attributes) #{text}
+            if (block)
+                block
+    else if (type=="error" && isInfo)
+        .notification(class=`notification--${type} notification--top-rounded`)&attributes(attributes) #{text}
+            if (block)
+                block
+    else
+        .notification(class=`notification--${type}`)&attributes(attributes) #{text}
