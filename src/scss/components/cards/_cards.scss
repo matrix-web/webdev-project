@@ -20,3 +20,58 @@ $background: #fff;
 .card>.title-6 {
 	margin-top: 0;
 }
+
+.card-blog {
+    max-width: 360px;
+}
+
+.card__img-blog {
+    border-radius: 6px;
+    max-width: 320px;
+    max-height: 140px;
+    background-image: linear-gradient( 90deg, rgb(23,46,103) 0%, rgba(255,255,255,0) 100%);
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: fill;
+        object-position: 0 -50px;
+    }
+}
+
+.card__title {
+    font-size: 1.375rem;
+    color: #222222;
+    line-height: 1.273;
+    font-weight: 600;
+}
+
+.card__title--indents {
+    margin: 19px 0 15px 0;
+}
+
+// .Plate {
+//     border-radius: 6px;
+//     background-color: rgb(255, 255, 255);
+//     box-shadow: 0px 10px 40px 0px rgba(99, 117, 138, 0.3);
+//     position: absolute;
+//     left: 80px;
+//     top: 219px;
+//     width: 360px;
+//     height: 308px;
+//     z-index: 103;
+//   }
+
+//   .Поездка_в_New_York_пример__длинного_названия_по {
+//     font-size: 22px;
+//     font-family: "Open Sans";
+//     color: rgb(34, 34, 34);
+//     line-height: 1.273;
+//     text-align: left;
+//     position: absolute;
+//     left: 99.609px;
+//     top: 421.144px;
+//     z-index: 108;
+// }
+  
