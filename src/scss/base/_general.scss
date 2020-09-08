@@ -49,7 +49,16 @@ img {
 }
 
 a {
-	color: $linkColor;
+    color: $linkColor;
+    
+    &:hover,
+    &:focus {
+        color: #0898ec;
+    }
+
+    &:active {
+        color: rgb(3, 101, 158);
+    }
 }
 
 code, pre {
