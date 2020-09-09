@@ -3,7 +3,6 @@
 @import './base/mixins';
 @import './base/_general';
 
-
 // UI-KIT styles
 @import './ui-kit/ui-kit';
 
@@ -22,6 +21,7 @@
 // Sections
 @import './sections/user-content';
 @import './sections/comment-registration';
+@import './sections/user-message';
 @import './sections/indicators';
 
 // Utils - Always Last - !IMPORTANT
