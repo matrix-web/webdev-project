@@ -3,7 +3,6 @@
 @import './base/mixins';
 @import './base/_general';
 
-
 // UI-KIT styles
 @import './ui-kit/ui-kit';
 
@@ -12,14 +11,18 @@
 @import './components/forms/radio';
 @import './components/forms/forms';
 @import './components/forms/input';
+@import './components/forms/file';
 @import './components/notifications/notifications';
 @import "./components/avatar/avatar";
 @import './components/badge/badge';
 @import './components/buttons/buttons';
+@import './components/indicators/indicators';
 
 // Sections
 @import './sections/user-content';
 @import './sections/comment-registration';
+@import './sections/user-message';
+@import './sections/indicators';
 
 // Utils - Always Last - !IMPORTANT
 @import './utils/margins';

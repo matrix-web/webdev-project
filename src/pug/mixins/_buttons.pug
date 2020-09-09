@@ -18,7 +18,7 @@ mixin buttonWithIcon(text, type='primary', element='link', source='#!', size='de
                 else
                     a.button(class=`button--${type}` href=source)&attributes(attributes) #[span.button__icon(class=`button__icon--position-${set.iconPosition}`) #[i(class=set.iconClass)]] #[span #{text}]
 
-mixin button(text, type='primary', size='default', element='link', sourse='#!')
+mixin button(text, type='primary', size='default', element='link', source='#!')
     if (element == 'button')
         if (size == 'small')
             button.button(class=`button--small button--${type}`)&attributes(attributes) #{text}

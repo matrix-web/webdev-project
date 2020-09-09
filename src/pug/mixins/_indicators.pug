@@ -1,0 +1,6 @@
+mixin indicator(text, color, val)
+    .indicator&attributes(attributes)
+        svg.indicator-svg(width="126" height="126" viewbox="0 0 126 126")
+            circle.indicator-svg__circle(r="56" cx="63" cy="63")
+            circle.indicator-svg__circle(class=`indicator-svg__circle--${color} val-${val}` r="56" cx="63" cy="63")
+        span.indicator__text #{text}

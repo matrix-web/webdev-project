@@ -1,0 +1,40 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const title = 'Поле file - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Поле file
+
+            .section-ui
+                +file("Выбрать файл", "default", 'upload-file', true)
+                br
+                br
+                +file("Выбрать файл", "inner", 'upload-multiple-files', true)
+                
+            pre.
+                +file("Выбрать файл", "default", 'upload-file', true)
+                +file("Выбрать файл", "inner", 'upload-multiple-files', true)
+            
+            .title mixins/_input-file.pug
+            pre.
+                mixin file(text, type="default", id, multiple=false, status="Файл не выбран")
+                    if (multiple && type == 'default')
+                        input.input-file(id=id type="file" data-multiple-caption="{count}" multiple)
+                        label.input-file-mark(for=id) \#{text}
+                        span \#{status}
+                    else if (type == 'default' && !multiple)
+                        input.input-file(id=id type="file" data-multiple-caption="{count}")
+                        label.input-file-mark(for=id) \#{text}
+                        span \#{status}
+                    else if (type == 'inner' && multiple)
+                        input.input-file(id=id type="file" data-multiple-caption="{count}" multiple)
+                        label.input-file-mark(for=id) \#{text}
+                            span
+                    else
+                        input.input-file(id=id type="file" data-multiple-caption="{count}")
+                        label.input-file-mark(for=id) \#{text}
+                            span
