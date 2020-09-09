@@ -1,18 +1,10 @@
-mixin file(text, type="default", id, multiple=false, status="Файл не выбран")
-    if (multiple && type == 'default')
-        input.input-file(id=id type="file" data-multiple-caption="{count}" multiple)
+mixin file(text, type="default", id, status="Файл не выбран")
+    if (type == 'default')
+        input.input-file(id=id type="file" data-multiple-caption="{count}")&attributes(attributes)
         label.input-file-mark(for=id) #{text}
         span #{status}
-    else if (type == 'default' && !multiple)
-        input.input-file(id=id type="file" data-multiple-caption="{count}")
-        label.input-file-mark(for=id) #{text}
-        span #{status}
-    else if (type == 'inner' && multiple)
-        input.input-file(id=id type="file" data-multiple-caption="{count}" multiple)
-        label.input-file-mark(for=id) #{text}
-            span
-    else
-        input.input-file(id=id type="file" data-multiple-caption="{count}")
+    else if (type == 'inner')
+        input.input-file(id=id type="file" data-multiple-caption="{count}")&attributes(attributes)
         label.input-file-mark(for=id) #{text}
             span
 

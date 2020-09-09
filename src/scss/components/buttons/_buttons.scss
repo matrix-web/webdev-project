@@ -15,8 +15,10 @@ $white: #fff;
     cursor: pointer;
     @include transition;
 
+    &:hover,
     &:focus {
         outline: none;
+        color: $white;
     }
 }
 

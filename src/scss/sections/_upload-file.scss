@@ -1,0 +1,30 @@
+$color: #222;
+
+.upload-file {
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.upload-file__title {
+    color: $color;
+    font-weight: 700;
+}
+
+.upload-file__description {
+    margin: 0 0 8px 0 !important;
+}
+
+.upload-file__preview {
+    max-width: 261px;
+    max-height: 141px;
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.upload-file__button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

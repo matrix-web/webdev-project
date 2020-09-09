@@ -9,18 +9,26 @@ block content
         .container.container--left.user-content.pt-35
             h1 Загрузка файлов
 
-            //- .section-ui
-            //-     +badge('link', 'Пользователь')(class="badge--link")
-            //-     +badge('button', 'Пользователь')(class="badge--button")
-            //- pre.
-            //-     +badge('link', 'Пользователь')(class="badge--link")
-            //-     +badge('button', 'Пользователь')(class="badge--button")
-            
-            //- .title mixins/_budge.pug
+            .section-ui
+                +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100x100 пикселей, и весом до 2Мб", "upload-files", true)
+            .section-ui
+                +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100x100 пикселей, и весом до 2Мб", "upload-file", false, true)(src="../img/blog/preview/mountains.jpg" alt="mountains")
+            pre.
+                +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100x100 пикселей, и весом до 2Мб", "upload-files", true)
+                +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100x100 пикселей, и весом до 2Мб", "upload-file", false, true)(src="../img/blog/preview/mountains.jpg" alt="mountains")
 
-            //- pre.
-            //-     mixin badge(type, text)
-            //-         if (type == 'button')
-            //-             button.badge\&attributes(attributes) \#{text}
-            //-         else
-            //-             a.badge(href='#!')\&attributes(attributes) \#{text}
+            .title mixins/_upload-file.pug
+            pre.
+                mixin uploadFile(title, description, id, multiple = false, isPreview = false)
+                    .upload-file
+                        .upload-file__title \#{title}
+                        p.upload-file__description \#{description}
+                        .upload-file__input
+                            if (multiple)
+                                +file("Выбрать файл", "default", id)(multiple)
+                            else
+                                +file("Выбрать файл", "default", id)
+                        if (isPreview)
+                            .upload-file__preview
+                                img&attributes(attributes)
+                                +button("Удалить", "delete", "small", "link")(class="upload-file__button")
