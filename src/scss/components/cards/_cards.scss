@@ -20,3 +20,63 @@ $background: #fff;
 .card>.title-6 {
 	margin-top: 0;
 }
+
+.card-blog {
+    max-width: 360px;
+}
+
+.card__img-blog {
+    border-radius: $radius;
+    max-width: 320px;
+    max-height: 140px;
+    background-image: linear-gradient( 90deg, rgb(23,46,103) 0%, rgba(255,255,255,0) 100%);
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: fill;
+        object-position: 0 -50px;
+    }
+}
+
+.card__title {
+    font-size: 1.375rem;
+    color: #222222;
+    line-height: 1.273;
+    font-weight: 600;
+}
+
+.card-blog--indents {
+    margin: 20px 0 15px 0;
+}
+
+.card--button-size {
+    align-self: flex-start;
+}
+
+.card-work {
+    max-width: 360px;
+    padding: 0;
+}
+
+.card__img-work {
+    max-width: 360px;
+    max-height: 190px;
+    background-image: linear-gradient( 90deg, rgb(23,46,103) 0%, rgba(255,255,255,0) 100%);
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.card-work--indents {
+    margin-bottom: 20px;
+}
+
+.card-content {
+    padding: 20px;
+}
