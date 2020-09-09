@@ -1,0 +1,123 @@
+$strokeGreen: #3aaa35;
+$strokeBlue: #009cf5;
+$strokeYellow: #ffcc00;
+$white: #fff;
+
+.indicator {
+    display: inline-block;
+    position: relative;
+}
+
+.indicator-svg {
+    display: block;
+}
+
+.indicator-svg__circle {
+    stroke: #c9c9c9; 
+	fill: transparent; 
+    stroke-width: 10px;
+    stroke-dasharray: 351.85px;
+	stroke-dashoffset: 0px;
+	transform-origin: center;
+    transform: rotate(-90deg);
+}
+
+.indicator-svg__circle--green {
+    stroke: $strokeGreen;
+}
+
+.indicator-svg__circle--blue {
+    stroke: $strokeBlue;
+}
+
+.indicator-svg__circle--yellow {
+    stroke: $strokeYellow;
+}
+
+.indicator__text {
+    color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 900;
+}
+
+.val-95 {
+    stroke-dashoffset: 17.59px;
+}
+
+.val-90 {
+    stroke-dashoffset: 35.18px;
+}
+
+.val-85 {
+    stroke-dashoffset: 52.78px;
+}
+
+.val-80 {
+    stroke-dashoffset: 70.37px;
+}
+
+.val-75 {
+    stroke-dashoffset: 87.96px;
+}
+
+.val-70 {
+    stroke-dashoffset: 105.55px;
+}
+
+.val-65 {
+    stroke-dashoffset: 123.15px;
+}
+
+.val-60 {
+    stroke-dashoffset: 140.74px;
+}
+
+.val-55 {
+    stroke-dashoffset: 158.33px;
+}
+
+.val-50 {
+    stroke-dashoffset: 175.92px;
+}
+
+.val-45 {
+    stroke-dashoffset: 193.51px;
+}
+
+.val-40 {
+    stroke-dashoffset: 211.11px;
+}
+
+.val-35 {
+    stroke-dashoffset: 228.7px;
+}
+
+.val-30 {
+    stroke-dashoffset: 246.29px;
+}
+
+.val-25 {
+    stroke-dashoffset: 263.88px;
+}
+
+.val-20 {
+    stroke-dashoffset: 281.48px;
+}
+
+.val-15 {
+    stroke-dashoffset: 299.07px;
+}
+
+.val-10 {
+    stroke-dashoffset: 316.66px;
+}
+
+.val-5 {
+    stroke-dashoffset: 334.25px;
+}
