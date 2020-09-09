@@ -17,10 +17,12 @@
 @import "./components/avatar/avatar";
 @import './components/badge/badge';
 @import './components/buttons/buttons';
+@import './components/indicators/indicators';
 
 // Sections
 @import './sections/user-content';
 @import './sections/comment-registration';
+@import './sections/indicators';
 
 // Utils - Always Last - !IMPORTANT
 @import './utils/margins';
