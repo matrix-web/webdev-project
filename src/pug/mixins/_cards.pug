@@ -1,0 +1,14 @@
+mixin cards(type, title, img, altText, link="#")
+    if (type == 'blog')
+        .card.card-blog
+            .card__img-blog
+                img(src=`../img/blog/preview/${img}.jpg`, alt=altText)
+            .card__title.card-blog--indents #{title}
+            +button("Читать", "primary", "default", link)(class="card--button-size")
+    else if (type=="portfolio")
+        .card.card-work
+            .card__img-work
+                img(src=`../img/portfolio/${img}.jpg`, alt=altText)
+            .card-content
+                .card__title.card-work--indents #{title}
+                +button("Смотреть кейс", "primary", "default", link)(class="card--button-size")

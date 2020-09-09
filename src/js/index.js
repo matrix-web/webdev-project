@@ -1,1 +1,1 @@
-import './scrollbar'
+import './modules/custom-file-input/custom-input-file'

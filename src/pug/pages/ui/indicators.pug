@@ -1,0 +1,28 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const title = 'Индикаторы - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Индикаторы
+
+            .section-ui.dark-bg
+                +indicator("HTML5", "green", 90)
+                +indicator("PHP", "blue", 65)
+                +indicator("Gulp", "yellow", 50)
+            pre.
+                +indicator("HTML5", "green", 90)
+                +indicator("PHP", "blue", 65)
+                +indicator("Gulp", "yellow", 50)
+            
+            .title mixins/_indicators.pug
+            pre.
+                mixin indicator(text, color, val)
+                    .indicator&attributes(attributes)
+                        svg.indicator-svg(width="126" height="126" viewbox="0 0 126 126")
+                            circle.indicator-svg__circle(r="56" cx="63" cy="63")
+                            circle.indicator-svg__circle(class=`indicator-svg__circle--${color} val-${val}` r="56" cx="63" cy="63")
+                        span.indicator__text \#{text}
