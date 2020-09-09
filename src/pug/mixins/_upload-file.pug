@@ -1,0 +1,13 @@
+mixin uploadFile(title, description, id, multiple = false, isPreview = false)
+    .upload-file
+        .upload-file__title #{title}
+        p.upload-file__description #{description}
+        .upload-file__input
+            if (multiple)
+                +file("Выбрать файл", "default", id)(multiple)
+            else
+                +file("Выбрать файл", "default", id)
+        if (isPreview)
+            .upload-file__preview
+                img&attributes(attributes)
+                +button("Удалить", "delete", "small", "link")(class="upload-file__button")
