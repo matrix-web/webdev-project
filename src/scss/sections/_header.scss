@@ -1,0 +1,73 @@
+.header {
+    background-color: rgba(0, 88, 139, .75);
+    height: 200px;
+    background-image: url("../../img/bg/header-bg.png");
+    background-position: center -330px;
+    background-size: cover;
+    padding: 42px 50px 35px;
+
+    a {
+        @include transition;
+        line-height: 1.33;
+        text-decoration: underline;
+        color: $white;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: $white;
+}
+
+.header-logo__icon {
+    margin-right: 6px;
+}
+
+.header-logo__subtitle {
+    display: block;
+    margin-top: 16px;
+    margin-left: 49px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #81c5ee;
+}
+
+.header-links {
+
+    a {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-right: 25px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.header-nav {
+    margin-top: 27px;
+    margin-left: 49px;
+
+    a {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-right: 45px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
