@@ -1,0 +1,29 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const title = 'Комментарий - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Комментарий
+
+            .section-ui
+                +comment("avatar-small", "small", "comment__avatar", "Джон До", "05 Мая 2019 года в 15:45", "John Doe")
+                    | Замечательный парк, обязательно отправлюсь туда этим летом.
+            pre.
+                +comment("avatar-small", "small", "comment__avatar", "Джон До", "05 Мая 2019 года в 15:45", "John Doe")
+                    | Замечательный парк, обязательно отправлюсь туда этим летом
+            
+            .title mixins/_avatars.pug
+            pre.
+                mixin comment(avatarImg, avatarType, avatarClass, name, date, altText='')
+                    .comment
+                        .comment-wrapper
+                            +avatar(avatarImg, avatarType, avatarClass)(alt=altText)
+                            .comment-info&attributes(attributes)
+                                .comment-info__name \#{name} \#[span.comment-info__date \#[i.far.fa-clock.comment__icon] \#[span \#{date}]]
+                                .comment-info__text
+                                    if (block)
+                                        block

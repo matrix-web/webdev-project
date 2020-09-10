@@ -1,7 +1,7 @@
-mixin avatar(avatar, modify = '')
-    if (modify == 'small')
-        .avatar(class="avatar--small")
+mixin avatar(avatar, modify = '', styleClass= '')
+    if (modify == "small")
+        .avatar(class=`avatar--small ${styleClass}`)
             img.avatar__img(src=`../img/avatars/${avatar}.jpg`)&attributes(attributes)
-    else
-        .avatar
+    else if (modify == "big")
+        .avatar(class=styleClass)
             img.avatar__img(src=`../img/avatars/${avatar}.jpg`)&attributes(attributes)

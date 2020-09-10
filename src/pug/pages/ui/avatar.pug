@@ -10,19 +10,19 @@ block content
             h1 Аватар
             
             .section-ui
-                +avatar('avatar')(alt="Avatar Big")
-                +avatar('avatar-small', 'small')(alt="Avatar small")
+                +avatar("avatar", "big")(alt="Avatar Big")
+                +avatar("avatar-small", "small")(alt="Avatar small")
             pre.
-                +avatar('avatar')(alt="Avatar Big")
-                +avatar('avatar-small', 'small')(alt="Avatar small")
+                +avatar("avatar", "big")(alt="Avatar Big")
+                +avatar("avatar-small", "small")(alt="Avatar small")
             
             .title mixins/_avatars.pug
 
             pre.
-                mixin avatar(avatar, modify = '')
-                    if (modify == 'small')
-                        .avatar(class="avatar--small")
-                            img.avatar__img(src=`../img/avatars/${avatar}.jpg`)&attributes(attributes)
-                    else
-                        .avatar
-                            img.avatar__img(src=`../img/avatars/${avatar}.jpg`)&attributes(attributes)
+                mixin avatar(avatar, modify = '', styleClass= '')
+                if (modify == "small")
+                    .avatar(class=`avatar--small ${styleClass}`)
+                        img.avatar__img(src=`../img/avatars/${avatar}.jpg`)&attributes(attributes)
+                else if (modify == "big")
+                    .avatar(class=styleClass)
+                        img.avatar__img(src=`../img/avatars/${avatar}.jpg`)&attributes(attributes)
