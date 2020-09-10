@@ -1,0 +1,35 @@
+.leave-comment {
+    padding: 20px;
+    border-radius: 6px;
+    background-color: rgba(238, 240, 242, .502);
+}
+
+.leave-comment-wrapper {
+    display: flex;
+}
+
+.leave-comment-form {
+    flex: 100% 1 1;
+    margin-left: 20px;
+}
+
+.leave-comment-form__name {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #3a3a3a;
+    font-weight: 900;
+    line-height: 1.375;
+}
+
+.leave-comment-form__notification {
+    margin-bottom: 10px;
+}
+
+.leave-comment-form__textarea {
+    margin-bottom: 10px;
+}
+
+.title-2--indents {
+    margin-bottom: 0;
+    margin-bottom: 15px;
+}

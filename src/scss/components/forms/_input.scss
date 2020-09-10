@@ -40,11 +40,12 @@ $labelColor: #222;
 
 .textarea {
     width: 100%;
-    min-height: 158px;
+    max-height: 100px;
     border-radius: 4px;
     border: 1px solid #b1bfc7;
     background-color: $white;
     padding: 15px;
+    resize: none;
 
     &:focus,
 	&:active {
