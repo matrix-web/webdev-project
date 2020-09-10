@@ -15,9 +15,9 @@ function server () {
         cors: true
     })
 
-    watch(paths.pug.watch, series(pugCompile)).on('change', browserSync.stream)
-    watch(paths.styles.watch, series(processingStyles)).on('change', browserSync.reload)
-    watch(paths.js.watch, series(processingScripts)).on('change', browserSync.reload)
+    watch(paths.pug.watch).on('change', series(pugCompile))
+    watch(paths.styles.watch).on('change', series(processingStyles))
+    watch(paths.js.watch).on('change', series(processingScripts))
 }
 
 export default server
