@@ -1,0 +1,67 @@
+$adminPanelColorLink: #222;
+$adminPanelLinkHoverFocus: rgba(34, 34, 34, .7);
+$adminPanelLinkActive: rgba(34, 34, 34, 0.95);
+
+.admin-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 15px 45px 10px 15px;
+}
+
+.admin-panel-user {
+    display: flex;
+}
+
+.admin-panel-user-info {
+    margin-left: 15px;
+}
+
+.admin-panel-user-info__name {
+    color: #383737;
+    font-weight: 900;
+    line-height: 1.375;
+}
+
+.admin-panel-nav a {
+    @include transition;
+    margin-right: 30px;
+    color: $adminPanelColorLink;
+    text-decoration: none;
+    line-height: 1.375;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+        color: $adminPanelLinkHoverFocus;
+    }
+
+    &:active {
+        color: $adminPanelLinkActive;
+    }
+}
+
+.admin-pane-nav__icon {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.admin-panel-exit a {
+    @include transition;
+    color: $adminPanelColorLink;
+    text-decoration: none;
+    line-height: 1.375;
+
+    &:hover,
+    &:focus {
+        color: $adminPanelLinkHoverFocus;
+    }
+
+    &:active {
+        color: $adminPanelLinkActive;
+    }
+}

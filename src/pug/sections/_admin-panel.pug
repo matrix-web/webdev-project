@@ -1,0 +1,14 @@
+.admin-panel
+    .admin-panel-user
+        +avatar("avatar-small", "small")(alt="Емельян Казаков")
+        .admin-panel-user-info
+            .admin-panel-user-info__name Емельян Казаков
+            +badge('link', 'Пользователь')(class="badge--link")
+    .admin-panel-nav
+        a(href="#!") #[span.admin-pane-nav__icon #[i.fas.fa-plus-circle]] Пост
+        a(href="#!") #[span.admin-pane-nav__icon #[i.fas.fa-plus-circle]] Работу
+        a(href="#!") #[span.admin-pane-nav__icon #[i.far.fa-edit]] Обо мне
+        a(href="#!") #[span.admin-pane-nav__icon #[i.far.fa-edit]] Контакты
+        a(href="#!") #[span.admin-pane-nav__icon #[i.fas.fa-envelope]] Сообщения
+    .admin-panel-exit
+        a(href="#!") #[i.fas.fa-sign-out-alt] Выход
