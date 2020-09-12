@@ -1,0 +1,55 @@
+.about {
+    border: 1px solid #e9eff3;
+}
+
+.about-wrapper {
+    display: flex;
+}
+
+.about__avatar {
+    flex: 205px 1 0;
+    margin: 0 49px 0 15px
+}
+
+.about-content {
+    margin-bottom: 20px;
+}
+
+.about-skills__button {
+    margin-top: 20px;
+}
+
+.user-content h1 {
+    color: #037ec6;
+}
+
+.main-title--indents {
+    margin-bottom: 30px;
+}
+
+.main-title-1 {
+    margin-top: 0;
+    font-size: 1.75rem;
+    color: rgb(34, 34, 34);
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.main-link {
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.works {
+    display: flex;
+    justify-content: space-between;
+}
+
+.posts {
+    display: flex;
+    justify-content: space-between;
+}
+
