@@ -31,6 +31,9 @@
 @import "./sections/footer";
 @import "./sections/blog-post";
 
+// Pages
+@import './pages/main-page.scss';
+
 // Utils - Always Last - !IMPORTANT
 @import "./utils/margins";
 @import "./utils/paddings";

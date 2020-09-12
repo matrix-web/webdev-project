@@ -1,0 +1,28 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const title = 'Главная страница - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Главная страница
+            
+            //- .section-ui
+            //-     +avatar("avatar", "big")(alt="Avatar Big")
+            //-     +avatar("avatar-small", "small")(alt="Avatar small")
+            //- pre.
+            //-     +avatar("avatar", "big")(alt="Avatar Big")
+            //-     +avatar("avatar-small", "small")(alt="Avatar small")
+            
+            //- .title mixins/_avatars.pug
+
+            //- pre.
+            //-     mixin avatar(avatar, modify = '', styleClass= '')
+            //-     if (modify == "small")
+            //-         .avatar(class=`avatar--small ${styleClass}`)
+            //-             img.avatar__img(src=`../img/avatars/${avatar}.jpg`)&attributes(attributes)
+            //-     else if (modify == "big")
+            //-         .avatar(class=styleClass)
+            //-             img.avatar__img(src=`../img/avatars/${avatar}.jpg`)&attributes(attributes)
