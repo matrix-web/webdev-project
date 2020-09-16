@@ -1,0 +1,6 @@
+mixin workExp(range, title)
+    .experience-info.user-content&attributes(attributes)
+        span.experience-info__range #{range}
+        h4 #{title}
+        if (block)
+            block
