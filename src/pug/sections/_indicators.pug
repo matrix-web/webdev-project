@@ -1,16 +1,25 @@
-.indicators.content-padding
+.indicators.indicators--indents
     .row.ml-0.mr-0.indicators__row
-        .col-10.offset-1
+        .col-3
+            .indicators-group 
+                h3.indicators-group__title Frontend
+        .col-9
             +indicator("HTML5", "green", 90)(class="indicators__indicator")
             +indicator("CSS3", "green", 90)(class="indicators__indicator")
             +indicator("JS", "green", 90)(class="indicators__indicator")
             +indicator("jQuery", "green", 90)(class="indicators__indicator")
     .row.ml-0.mr-0.indicators__row
-        .col-10.offset-1
+        .col-3
+            .indicators-group 
+                h3.indicators-group__title Backend
+        .col-9
             +indicator("PHP", "blue", 90)(class="indicators__indicator")
             +indicator("MySQL", "blue", 90)(class="indicators__indicator")
     .row.ml-0.mr-0
-        .col-10.offset-1
+        .col-3
+            .indicators-group 
+                h3.indicators-group__title Workflow
+        .col-9
             +indicator("Git", "yellow", 90)(class="indicators__indicator")
             +indicator("Gulp", "yellow", 90)(class="indicators__indicator")
             +indicator("Bower", "yellow", 90)(class="indicators__indicator")
