@@ -32,8 +32,9 @@
 @import "./sections/blog-post";
 
 // Pages
-@import './pages/main-page.scss';
-@import './pages/about.scss';
+@import "./pages/main-page.scss";
+@import "./pages/about.scss";
+@import "./pages/about-info-edit.scss";
 
 // Utils - Always Last - !IMPORTANT
 @import "./utils/margins";
