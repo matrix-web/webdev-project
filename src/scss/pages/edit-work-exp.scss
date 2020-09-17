@@ -1,0 +1,43 @@
+.edit-exp__title-1 {
+    font-size: 1.75rem;
+    color: #222;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 35px;
+}
+
+.edit-exp__experience-info {
+    position: relative;
+    padding: 20px;
+    background-color: #f6f7f8;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.edit-exp__button-del {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.edit-exp__title-3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #222;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.new-place {
+    padding: 20px;
+    background-color: #f6f7f8;
+}
+
+.new-place-group {
+    margin-bottom: 20px;
+}
