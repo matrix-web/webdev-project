@@ -1,0 +1,34 @@
+.edit-tech__title {
+    font-size: 1.75rem;
+    color: #222;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 35px;
+}
+
+.tech-form__col {
+    margin-right: 40px;
+    padding: 0;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.tech-form__field {
+    width: 100px;
+    margin-right: 5px;
+}
+
+.edit-tech__row {
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 30px;
+    }
+}
+
+.tech-form__button-save {
+    margin-right: 25px;
+}
+
