@@ -42,7 +42,7 @@ $background: #fff;
 }
 
 .card__title {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     color: #222222;
     line-height: 1.273;
     font-weight: 600;
@@ -57,12 +57,15 @@ $background: #fff;
 }
 
 .card-work {
+    display: flex;
+    flex-direction: column;
     max-width: 360px;
     max-height: 320px;
     padding: 0;
 }
 
 .card__img-work {
+    flex-shrink: 0;
     max-width: 360px;
     max-height: 190px;
     background-image: linear-gradient( 90deg, rgb(23,46,103) 0%, rgba(255,255,255,0) 100%);
