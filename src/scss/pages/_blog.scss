@@ -1,0 +1,29 @@
+.blog-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.blog-head__title {
+    font-size: 1.75rem;
+    color: #222;
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+.blog__row {
+    margin-bottom: 50px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.blog__col {
+    padding: 0;
+    padding-right: 30px;
+
+    &:nth-child(n + 3) {
+        padding-right: 0;
+    }
+}
