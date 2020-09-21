@@ -2,6 +2,11 @@
     padding: 20px;
     border-radius: 6px;
     background-color: #eef0f2;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .comment-wrapper {
