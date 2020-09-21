@@ -1,8 +1,8 @@
 mixin comment(avatarImg, avatarType, avatarClass, name, date, altText='')
-    .comment
+    .comment&attributes(attributes)
         .comment-wrapper
             +avatar(avatarImg, avatarType, avatarClass)(alt=altText)
-            .comment-info&attributes(attributes)
+            .comment-info
                 .comment-info__name #{name} #[span.comment-info__date #[i.far.fa-clock.comment__icon] #[span #{date}]]
                 .comment-info__text
                     if (block)

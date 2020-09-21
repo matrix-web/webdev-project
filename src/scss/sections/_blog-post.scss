@@ -1,3 +1,12 @@
+.blog-post-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-post__button-edit {
+    align-self: flex-start;
+}
+
 .blog-post__title {
     margin: 0 !important;
     margin-bottom: 16px !important;
@@ -27,4 +36,10 @@
     max-height: 520px;
     overflow: hidden;
     margin-bottom: 30px;
+}
+
+.blog-post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
 }
