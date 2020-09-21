@@ -1,0 +1,27 @@
+.add-work-title {
+    font-size: 1.75rem;
+    color: #222;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 35px;
+}
+
+.add-work-field {
+    margin-bottom: 30px;
+}
+
+.add-work-field-links {
+    display: flex;
+
+    label {
+        margin-right: 30px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.add-work__button-save {
+    margin-right: 20px;
+}

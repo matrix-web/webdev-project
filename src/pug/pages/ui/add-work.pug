@@ -1,0 +1,48 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Добавить работу - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Добавить работу
+            
+            .section-ui
+                a(href="../add-work.html" target="_blank") Добавить работу
+            
+            .title pages/add-work.pug
+            pre.
+                extends ../layouts/page_layout/page.pug
+
+                block variables
+                    - const title = "Добавить работу";
+                    - const language = "ru";
+
+                block content
+                    include ../sections/_admin-panel.pug
+                    include ../sections/_header-admin.pug
+                    main.content-padding
+                        .container
+                            .row.no-margin
+                                .col-10.offset-1
+                                    h1.add-work-title Добавить работу
+                                    form.add-work(action="#!")
+                                        .add-work-field
+                                            +inputField("text", "Название", "work-name")(placeholder="Введите название работы")
+                                        .add-work-field
+                                            +uploadFile("Изображение", "Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.", "upload-work-preview")
+                                        .add-work-field
+                                            +textarea("work-description", "Описание")(placeholder="Введите описание")
+                                        .add-work-field
+                                            +textarea("work-result", "Результат")(placeholder="Введите описание")
+                                        .add-work-field
+                                            +textarea("work-tech", "Технологии")(placeholder="Введите описание")
+                                        .add-work-field.add-work-field-links
+                                            +inputField("text", "Ссылка на проект", "project-link")(placeholder="Введите ссылку")
+                                            +inputField("text", "Ссылка на github", "github-link")(placeholder="Введите ссылку")
+                                        .add-work-buttons
+                                            +button("Сохранить", "save", "default", "button")(class="add-work__button-save")
+                                            +button("Отмена", "primary", "default", "button")
+                    include ../sections/_footer.pug
