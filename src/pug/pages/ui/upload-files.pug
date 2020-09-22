@@ -10,24 +10,24 @@ block content
             h1 Загрузка файлов
 
             .section-ui
-                +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100x100 пикселей, и весом до 2Мб", "upload-files", true)
+                +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100x100 пикселей, и весом до 2Мб", "upload-files", "",  true)
             .section-ui
-                +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100x100 пикселей, и весом до 2Мб", "upload-file", false, true)(src="../img/blog/preview/mountains.jpg" alt="mountains")
+                +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100x100 пикселей, и весом до 2Мб", "upload-file",  "", false, true)(src="../img/blog/preview/mountains.jpg" alt="mountains")
             pre.
                 +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100x100 пикселей, и весом до 2Мб", "upload-files", true)
                 +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100x100 пикселей, и весом до 2Мб", "upload-file", false, true)(src="../img/blog/preview/mountains.jpg" alt="mountains")
 
             .title mixins/_upload-file.pug
             pre.
-                mixin uploadFile(title, description, id, multiple = false, isPreview = false)
+                mixin uploadFile(title, description, id, mode="", multiple = false, isPreview = false)
                     .upload-file
                         .upload-file__title \#{title}
                         p.upload-file__description \#{description}
                         .upload-file__input
                             if (multiple)
-                                +file("Выбрать файл", "default", id)(multiple)
+                                +file("Выбрать файл", "default", id, mode)(multiple)
                             else
-                                +file("Выбрать файл", "default", id)
+                                +file("Выбрать файл", "default", id, mode)
                         if (isPreview)
                             .upload-file__preview
                                 img&attributes(attributes)
