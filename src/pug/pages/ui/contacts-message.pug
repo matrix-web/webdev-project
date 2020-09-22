@@ -1,0 +1,36 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Контакты сообщения - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Контакты сообщения
+            
+            .section-ui
+                a(href="../contacts-message.html" target="_blank") Контакты сообщения
+            
+            .title pages/contacts-message.pug
+            pre.
+                extends ../layouts/page_layout/page.pug
+
+                block variables
+                    - const title = "Контакты сообщения";
+                    - const language = "ru";
+
+                block content
+                    .sticky-footer-wrapper
+                        include ../sections/_admin-panel.pug
+                        include ../sections/_header-admin.pug
+                        main
+                            .contact-message.content-padding
+                                .container
+                                    .row.no-margin
+                                        .col-10.offset-1
+                                            h1.contact-message__title Сообщения от посетителей
+                                            .messages
+                                                include ../sections/_user-message.pug
+                                                include ../sections/_user-message.pug
+                        include ../sections/_footer.pug
