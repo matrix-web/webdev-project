@@ -1,0 +1,46 @@
+extends ../layouts/page_layout/page.pug
+
+block variables
+    - const title = "Контакты редактировать";
+    - const language = "ru";
+
+block content
+    .sticky-footer-wrapper
+        include ../sections/_admin-panel.pug
+        include ../sections/_header-admin.pug
+        main
+            .contacts-edit.content-padding
+                .container
+                    .row.no-margin
+                        .col-12
+                            h1.contacts-edit__title Редактировать данные
+                            form.contacts-edit-form(action="#!")
+                                .row.no-margin.contacts-edit__row
+                                    .col-3.pl-0
+                                        +inputField("text", "Имя", "firstname")(placeholder="Введите имя")
+                                    .col-3
+                                        +inputField("text", "Фамилию", "lastname")(placeholder="Введите Фамилию")
+                                .row.no-margin.contacts-edit__row
+                                    .col-3.pl-0
+                                        +inputField("email", "Email", "email")(placeholder="Введите email")
+                                    .col-3
+                                        +inputField("text", "Skype", "skype")(placeholder="Введите skype")
+                                .row.no-margin.contacts-edit__row
+                                    .col-3.pl-0
+                                        +inputField("text", "Вконтакте", "vk")(placeholder="Введите ссылку на профиль")
+                                    .col-3
+                                        +inputField("text", "Facebook", "facebook")(placeholder="Введите ссылку на профиль")
+                                    .col-3
+                                        +inputField("text", "Github", "github")(placeholder="Введите ссылку на профиль")
+                                    .col-3
+                                        +inputField("text", "Twitter", "twitter")(placeholder="Введите ссылку на профиль")
+                                .row.no-margin.contacts-edit__row
+                                    .col-3.pl-0
+                                        +inputField("tel", "Телефон", "phone")(placeholder="Введите телефон")
+                                    .col-3
+                                        +inputField("text", "Адрес", "address")(placeholder="Введите адрес")
+                                .row.no-margin
+                                    .col-4.pl-0
+                                        +button("Сохранить", "save", "default", "button")(class="contacts-edit__button-save")
+                                        +button("Отмена", "primary", "default", "button")
+        include ../sections/_footer.pug
