@@ -22,6 +22,11 @@
     background-color: #1e6791;
 }
 
+.input-file + .input-file-mark--round {
+    padding: 10px 16px; 
+    border-radius: 20px;
+}
+
 .input-file + .input-file-mark + span {
     color: #8e9ba2;
     vertical-align: top;

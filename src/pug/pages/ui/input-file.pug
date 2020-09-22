@@ -21,12 +21,12 @@ block content
             
             .title mixins/_input-file.pug
             pre.
-                mixin file(text, type="default", id, status="Файл не выбран")
-                    if (type == 'default')
-                        input.input-file(id=id type="file" data-multiple-caption="{count}")&attributes(attributes)
-                        label.input-file-mark(for=id) \#{text}
-                        span \#{status}
-                    else if (type == 'inner')
-                        input.input-file(id=id type="file" data-multiple-caption="{count}")&attributes(attributes)
-                        label.input-file-mark(for=id) \#{text}
-                            span
+                mixin file(text, type="default", id, mode="", status="Файл не выбран")
+                if (type == 'default')
+                    input.input-file(id=id type="file" data-multiple-caption="{count}")&attributes(attributes)
+                    label.input-file-mark(class=mode for=id) \#{text}
+                    span \#{status}
+                else if (type == 'inner')
+                    input.input-file(id=id type="file" data-multiple-caption="{count}")&attributes(attributes)
+                    label.input-file-mark(class=mode for=id) \#{text}
+                        span
