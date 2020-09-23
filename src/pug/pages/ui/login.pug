@@ -1,0 +1,45 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Вход - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Вход
+            
+            .section-ui
+                a(href="../login.html" target="_blank") Вход
+            
+            .title pages/login.pug
+            pre.
+                extends ../layouts/page_layout/page.pug
+
+                block variables
+                    - const title = "Вход";
+                    - const language = "ru";
+
+                block content
+                    .login
+                        .login-head
+                            .login-logo
+                                span.login-logo__icon \#[i.far.fa-paper-plane]
+                                | Супер Сайт
+                            a.login-link(href="#!") Регистрация
+                        .row.no-margin
+                            .col-12
+                                .login-form-wrapper
+                                    form.login-form(action="#!")
+                                        h1.login-form__title Вход на сайт
+                                        +notification("Введите email", "error")
+                                        .login-form-field
+                                            +inputField("email")(name="login-email" placeholder="Email")
+                                        .login-form-field
+                                            +inputField("password")(name="login-password" placeholder="Пароль")
+                                        .login-form-field.login-form-field--position
+                                            +checkbox("Запомнить меня", "login-form__checkbox")(name="save-me")
+                                            a.login-link(href="#!") Забыл пароль
+                                        +button("Войти", "secondary", "default", "button")(name="login" class="login-form__button-login")
+                        .login-foot
+                            p © Емельян Казаков 2020

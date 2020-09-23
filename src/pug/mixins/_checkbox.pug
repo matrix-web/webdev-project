@@ -1,5 +1,5 @@
-mixin checkbox(text)
-    label.label-checkbox
+mixin checkbox(text, labelClass="")
+    label.label-checkbox(class=labelClass)
         input.checkbox(type="checkbox")&attributes(attributes)
         span.fake-checkbox
         | #{text}

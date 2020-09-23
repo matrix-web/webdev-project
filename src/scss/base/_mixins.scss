@@ -18,3 +18,108 @@
     padding-top: 10.5px;
     padding-bottom: 10.5px;
 }
+
+@mixin auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 100vh;
+    background-image: url("../../img/bg/login-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 100;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        min-height: 330px;
+        background-image: url("../../img/bg/login-decorate-2.png");
+        background-repeat: repeat-x;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        min-height: 330px;
+        background-image: url("../../img/bg/login-decorate-1.png");
+        background-repeat: repeat-x;
+    }
+}
+
+@mixin authHead {
+    padding: 0 50px;
+    min-height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin authLogo {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: $white;
+}
+
+@mixin authLink {
+    color: $white;
+
+    &:focus, 
+    &:hover {
+        color: #e7e7e7;
+        text-decoration: none;
+    }
+
+    &:active {
+        color: #dddddd;
+    }
+}
+
+@mixin authForm {
+    max-width: 360px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    padding: 40px 30px;
+    border-radius: 7px;
+    background-color: rgba(18, 45, 61, 0.6);
+    box-shadow: 0px 10px 40px 0px rgba(99, 117, 138, 0.004);
+    text-align: center;
+}
+
+@mixin authFormTitle {
+    font-size: 1.75rem;
+    color: $white;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+@mixin authFormField {
+    margin: 20px 0;
+
+    &--position {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@mixin authFoot {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    color: #fff;
+    line-height: 1.5;
+}
