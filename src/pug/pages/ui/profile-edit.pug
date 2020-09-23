@@ -1,0 +1,51 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Профиль редактировать - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Профиль редактировать
+            
+            .section-ui
+                a(href="../profile-edit.html" target="_blank") Профиль редактировать
+            
+            .title pages/profile-edit.pug
+            pre.
+                extends ../layouts/page_layout/page.pug
+
+                block variables
+                    - const title = "Профиль редактировать";
+                    - const language = "ru";
+
+                block content
+                    .sticky-footer-wrapper
+                        include ../sections/_header-user-profile.pug
+                        .profile-edit.content-padding
+                            .container
+                                .row.no-margin
+                                    .col-10.offset-1
+                                        h1.profile-edit__title Редактировать профиль
+                                .row.no-margin
+                                    .col-4.offset-1
+                                        form.profile-edit-form(action="#!")
+                                            .profile-edit-form-field
+                                                +inputField("text", "Имя", "user-name")(placeholder="Введите имя")
+                                            .profile-edit-form-field
+                                                +inputField("text", "Фамилия", "user-lastname")(placeholder="Введите фамилию")
+                                            .profile-edit-form-field
+                                                +inputField("mail", "Email", "user-email")(placeholder="Введите email")
+                                .row.no-margin.profile-edit__row
+                                    .col-8.offset-1
+                                        +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.", "user-files", "")
+                                .row.no-margin
+                                    .col-4.offset-1
+                                        .profile-edit-form-field
+                                            +inputField("text", "Страна", "user-country")(placeholder="Введите страну")
+                                        .profile-edit-form-field
+                                            +inputField("mail", "Город", "user-city")(placeholder="Введите город")
+                                        +button("Сохранить", "save", "default", "button")(class="profile-edit__button-save")
+                                        +button("Подробнее", "primary", "default", "button")
+                        include ../sections/_footer.pug
