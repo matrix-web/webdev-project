@@ -1,0 +1,41 @@
+.registration {
+    @include auth;
+}
+
+.registration-head {
+    @include authHead;
+}
+
+.registration-logo {
+    @include authLogo;
+}
+
+.registration-link {
+    @include authLink;
+    @include transition;
+}
+
+.registration-form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.registration-form {
+    @include authForm;
+}
+
+.registration-form__title {
+    @include authFormTitle;
+}
+
+.registration-form-field {
+    @include authFormField;
+}
+
+.registration-form__button-registration {
+    margin-top: 13px;
+}
+
+.registration-foot {
+    @include authFoot;
+}
