@@ -16,10 +16,16 @@ $bgcDescription: #e0e9ee;
     width: 100%;
     padding: 15px;
     background-color: $bgcDescription;
+    text-align: left;
 
     p {
         color: $infoColor !important;
         line-height: 1.5 !important;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         a {
             @include transition;
