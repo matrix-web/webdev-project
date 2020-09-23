@@ -1,0 +1,45 @@
+.profile-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.profile__title {
+    font-size: 1.75rem;
+    color: #222;
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+.profile-user {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.profile-user-wrapper {
+    margin-left: 50px;
+}
+
+.profile-user-info {
+    margin-bottom: 20px;
+    span {
+        display: block;
+        font-size: 14px;
+        color: #b4bbc2;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.profile-comments__title {
+    font-size: 1.625rem;
+    color: #383737;
+    line-height: 1.3;
+    font-weight: 600;
+    margin-bottom: 20px;
+}

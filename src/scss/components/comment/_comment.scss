@@ -47,3 +47,42 @@
     line-height: 1.5;
     font-weight: 400;
 }
+
+.profile-comment {
+    border-radius: 6px;
+    background-color: #eef0f2;
+    padding: 18px 20px;
+}
+
+.profile-comment-head {
+    margin-bottom: 6px;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.profile-comment__date {
+    font-size: .875rem;
+    color: #9b9b9b;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.profile-comment__icon {
+    padding-right: 8px;
+}
+
+.profile-comment-text {
+    color: #383737;
+    line-height: 1.5;
+}
+
+.profile-comment--indents {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

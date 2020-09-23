@@ -1,0 +1,41 @@
+extends ../layouts/page_layout/page.pug
+
+block variables
+    - const title = "Профиль пользователя";
+    - const language = "ru";
+
+block content
+    .sticky-footer-wrapper
+        include ../sections/_header-user-profile.pug
+        main
+            .profile.content-padding
+                .container
+                    .row.no-margin
+                        .col-11.offset-1
+                            .profile-head
+                                h1.profile__title Профиль
+                                +button("Редактировать", "edit", "default", "link")
+                    .row.no-margin
+                        .col-10.offset-1
+                            .profile-content
+                                .profile-user
+                                    +avatar("avatar", "big")(alt="Емельян Казаков")
+                                    .profile-user-wrapper
+                                        .profile-user-info
+                                            span Имя и фамилия
+                                            p Емельян Казаков
+                                        .profile-user-info
+                                            span Email
+                                            p pilat@mail.ru
+                                        .profile-user-info
+                                            span Страна, город
+                                            p Россия, Казань
+                                .profile-comments
+                                    h2.profile-comments__title Комментарии пользователя
+                                    +profileComment("Проездка в LA", "05 Мая 2017 года в 15:45")(class="profile-comment--indents")
+                                        p Замечательный парк, обязательно отправлюсь туда этим летом.
+                                    +profileComment("Ноутбук для веб-разработчика", "15 Мая 2017 года в 10:02")(class="profile-comment--indents")
+                                        p Замечательный парк, обязательно отправлюсь туда этим летом.
+                                    +profileComment("Настройка Sublime", "12 Мая 2017 года в 20:39")(class="profile-comment--indents")
+                                        p Замечательный парк, обязательно отправлюсь туда этим летом.
+        include ../sections/_footer.pug
