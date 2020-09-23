@@ -4,15 +4,16 @@ $infoColor: #38505e;
 $bgcDescription: #e0e9ee;
 
 .notification {
-    min-width: 410px;
+    width: 100%;
     padding: 10px 15px;
     border-radius: 4px;
     color: $white;
+    text-align: left;
     line-height: 1.5;
 }
 
 .notification-description {
-    min-width: 410px;
+    width: 100%;
     padding: 15px;
     background-color: $bgcDescription;
 
