@@ -21,28 +21,29 @@ block content
                     - const language = "ru";
 
                 block content
-                    include ../sections/_admin-panel.pug
-                    include ../sections/_header-admin.pug
-                    main.content-padding
-                        .container
-                            .row.no-margin
-                                .col-10.offset-1
-                                    h1.add-work-title Добавить работу
-                                    form.add-work(action="#!")
-                                        .add-work-field
-                                            +inputField("text", "Название", "work-name")(placeholder="Введите название работы")
-                                        .add-work-field
-                                            +uploadFile("Изображение", "Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.", "upload-work-preview")
-                                        .add-work-field
-                                            +textarea("work-description", "Описание")(placeholder="Введите описание")
-                                        .add-work-field
-                                            +textarea("work-result", "Результат")(placeholder="Введите описание")
-                                        .add-work-field
-                                            +textarea("work-tech", "Технологии")(placeholder="Введите описание")
-                                        .add-work-field.add-work-field-links
-                                            +inputField("text", "Ссылка на проект", "project-link")(placeholder="Введите ссылку")
-                                            +inputField("text", "Ссылка на github", "github-link")(placeholder="Введите ссылку")
-                                        .add-work-buttons
-                                            +button("Сохранить", "save", "default", "button")(class="add-work__button-save")
-                                            +button("Отмена", "primary", "default", "button")
-                    include ../sections/_footer.pug
+                    .sticky-footer-wrapper
+                        include ../sections/_admin-panel.pug
+                        include ../sections/_header-admin.pug
+                        main.content-padding
+                            .container
+                                .row.no-margin
+                                    .col-10.offset-1
+                                        h1.add-work-title Добавить работу
+                                        form.add-work(action="#!")
+                                            .add-work-field
+                                                +inputField("text", "Название")(placeholder="Введите название работы")
+                                            .add-work-field
+                                                +uploadFile("Изображение", "Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.", "upload-work-preview")
+                                            .add-work-field
+                                                +textarea("Описание")(placeholder="Введите описание")
+                                            .add-work-field
+                                                +textarea("Результат")(placeholder="Введите описание")
+                                            .add-work-field
+                                                +textarea("Технологии")(placeholder="Введите описание")
+                                            .add-work-field.add-work-field-links
+                                                +inputField("text", "Ссылка на проект")(placeholder="Введите ссылку")
+                                                +inputField("text", "Ссылка на github")(placeholder="Введите ссылку")
+                                            .add-work-buttons
+                                                +button("Сохранить", "save", "default", "button")(class="add-work__button-save")
+                                                +button("Отмена", "primary", "default", "button")
+                        include ../sections/_footer.pug

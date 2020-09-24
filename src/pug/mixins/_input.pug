@@ -1,17 +1,17 @@
-mixin inputField(typeField="text", labelText = "", id="")
+mixin inputField(typeField="text", labelText = "", labelattr={})
     if (labelText != "")
-        label.label(for=id) #[span #{labelText}]
-            input.input(id=id type=typeField)&attributes(attributes)
+        label.label&attributes(labelattr) #[span #{labelText}]
+            input.input(type=typeField)&attributes(attributes)
     else
         input.input(id=id type=typeField)&attributes(attributes)
 
-mixin textarea(id, labelText = "")
+mixin textarea(labelText="", labelattr={})
     if (labelText != "")
-        label.label(for=id) #[span #{labelText}]
-            textarea.textarea(id=id cols="30", rows="10" placeholder="Введите сообщение")&attributes(attributes)
+        label.label&attributes(labelattr) #[span #{labelText}]
+            textarea.textarea(cols="30", rows="10" placeholder="Введите сообщение")&attributes(attributes)
                 if (block)
                     block
     else
-        textarea.textarea(id=id cols="30", rows="10" placeholder="Введите сообщение")&attributes(attributes)
+        textarea.textarea(cols="30", rows="10" placeholder="Введите сообщение")&attributes(attributes)
             if (block)
                 block

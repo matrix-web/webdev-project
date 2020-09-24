@@ -16,20 +16,20 @@ block content
                     .col-4.offset-1
                         form.profile-edit-form(action="#!")
                             .profile-edit-form-field
-                                +inputField("text", "Имя", "user-name")(placeholder="Введите имя")
+                                +inputField("text", "Имя")(placeholder="Введите имя")
                             .profile-edit-form-field
-                                +inputField("text", "Фамилия", "user-lastname")(placeholder="Введите фамилию")
+                                +inputField("text", "Фамилия")(placeholder="Введите фамилию")
                             .profile-edit-form-field
-                                +inputField("mail", "Email", "user-email")(placeholder="Введите email")
+                                +inputField("email", "Email")(placeholder="Введите email")
                 .row.no-margin.profile-edit__row
                     .col-8.offset-1
                         +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.", "user-files", "")
                 .row.no-margin
                     .col-4.offset-1
                         .profile-edit-form-field
-                            +inputField("text", "Страна", "user-country")(placeholder="Введите страну")
+                            +inputField("text", "Страна")(placeholder="Введите страну")
                         .profile-edit-form-field
-                            +inputField("mail", "Город", "user-city")(placeholder="Введите город")
+                            +inputField("text", "Город")(placeholder="Введите город")
                         +button("Сохранить", "save", "default", "button")(class="profile-edit__button-save")
                         +button("Подробнее", "primary", "default", "button")
         include ../sections/_footer.pug

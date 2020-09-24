@@ -5,28 +5,29 @@ block variables
     - const language = "ru";
 
 block content
-    include ../sections/_admin-panel.pug
-    include ../sections/_header-admin.pug
-    main
-        .edit-exp.content-padding
-            .container
-                .row.no-margin
-                    .col-10.offset-1
-                        h1.edit-exp__title-1 Редактировать опыт работы
-                        .edit-exp-preview
-                            +workExp("февраль 2017  — по настоящее время", "Frontend разработчик, Вконтактe, mail.ru group")(class="edit-exp__experience-info")
-                                p Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
-                                +button("Удалить", "delete", "small", "button")(class="edit-exp__button-del")
-                            +workExp("февраль 2017  — по настоящее время", "Frontend разработчик, Вконтактe, mail.ru group")(class="edit-exp__experience-info")
-                                p Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
-                                +button("Удалить", "delete", "small", "button")(class="edit-exp__button-del")
-                        h3.edit-exp__title-3 Добавить новое место
-                        form.new-place(action="#!")
-                            .new-place-group
-                                +inputField("text", "Период", "work-range")(placeholder="Введите даты начала и окончания работы")
-                            .new-place-group
-                                +inputField("text", "Название должности", "post-name")(placeholder="Введите название должности")
-                            .new-place-group
-                                +textarea("work-descr", "Описание работы, должностные обязанности, достигнутые результаты")(placeholder="Напишите интересное краткое содержательное описание")
-                            +button("Добавить", "save", "default", "button")(type="submit")
-    include ../sections/_footer.pug
+    .sticky-footer-wrapper
+        include ../sections/_admin-panel.pug
+        include ../sections/_header-admin.pug
+        main
+            .edit-exp.content-padding
+                .container
+                    .row.no-margin
+                        .col-10.offset-1
+                            h1.edit-exp__title-1 Редактировать опыт работы
+                            .edit-exp-preview
+                                +workExp("февраль 2017  — по настоящее время", "Frontend разработчик, Вконтактe, mail.ru group")(class="edit-exp__experience-info")
+                                    p Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
+                                    +button("Удалить", "delete", "small", "button")(class="edit-exp__button-del")
+                                +workExp("февраль 2017  — по настоящее время", "Frontend разработчик, Вконтактe, mail.ru group")(class="edit-exp__experience-info")
+                                    p Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
+                                    +button("Удалить", "delete", "small", "button")(class="edit-exp__button-del")
+                            h3.edit-exp__title-3 Добавить новое место
+                            form.new-place(action="#!")
+                                .new-place-group
+                                    +inputField("text", "Период")(placeholder="Введите даты начала и окончания работы")
+                                .new-place-group
+                                    +inputField("text", "Название должности")(placeholder="Введите название должности")
+                                .new-place-group
+                                    +textarea("Описание работы, должностные обязанности, достигнутые результаты")(placeholder="Напишите интересное краткое содержательное описание")
+                                +button("Добавить", "save", "default", "button")(type="submit")
+        include ../sections/_footer.pug
