@@ -21,41 +21,42 @@ block content
                     - const language = "ru";
 
                 block content
-                    include ../sections/_admin-panel.pug
-                    include ../sections/_header-admin.pug
-                    main
-                        .about.content-padding
-                            .row.no-margin
-                                .col-12
-                                    .container
-                                        .about-wrapper
-                                            +avatar("avatar", "big", "about__avatar")(alt="Емельян Казаков")
-                                            .user-content
-                                                .about-content
-                                                    h1 Емельян Казаков
-                                                    p Я веб разработчик из Казани. Мне 28 лет. \#[br] Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                                                    p Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. \#[br] Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-                                                .about-skiils
-                                                    h3 Что я умею
-                                                    p Меня привлекет Frontend разработка, это не только моя работа, но и хобби. \#[br]Также знаком и могу решать не сложные задачи на Backend.
-                                                    p Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
-                                                    +button("Подробнее", "primary", "default", "link")(class="about-skills__button")
-                        .new-works.content-padding
-                            .row.no-margin
-                                .col-12
-                                    .container
-                                        .main-title-1.main-title--indents Новые \#[a.main-link(href="#!") работы]
-                                        .works
-                                            +cards("portfolio", "Верстка Landing Page", "portfolio-1", "work preview")
-                                            +cards("portfolio", "Верстка UI набора", "work-2", "work preview")
-                                            +cards("portfolio", "Верстка интернет магазина", "work-3", "work preview")
-                        .new-posts.content-padding.pt-0
-                            .row.no-margin
-                                .col-12
-                                    .container
-                                        .main-title-1.main-title--indents Новые записи в \#[a.main-link(href="#!") блоге]
-                                        .posts
-                                            +cards("blog", "Поездка в New York", "post-new-york", "New York")
-                                            +cards("blog", "Что я делал в долине", "post-2", "valley")
-                                            +cards("blog", "Поездка в New York", "post-3", "walk")
-                    include ../sections/_footer.pug
+                    .sticky-footer-wrapper
+                        include ../sections/_admin-panel.pug
+                        include ../sections/_header-admin.pug
+                        main
+                            .about.content-padding
+                                .row.no-margin
+                                    .col-12
+                                        .container
+                                            .about-wrapper
+                                                +avatar("avatar", "big", "about__avatar")(alt="Емельян Казаков")
+                                                .user-content
+                                                    .about-content
+                                                        h1 Емельян Казаков
+                                                        p Я веб разработчик из Казани. Мне 28 лет. \#[br] Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                                                        p Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. \#[br] Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                                                    .about-skiils
+                                                        h3 Что я умею
+                                                        p Меня привлекет Frontend разработка, это не только моя работа, но и хобби. \#[br]Также знаком и могу решать не сложные задачи на Backend.
+                                                        p Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+                                                        +button("Подробнее", "primary", "default", "link")(class="about-skills__button")
+                            .new-works.content-padding
+                                .row.no-margin
+                                    .col-12
+                                        .container
+                                            .main-title-1.main-title--indents Новые \#[a.main-link(href="#!") работы]
+                                            .works
+                                                +cards("portfolio", "Верстка Landing Page", "portfolio-1", "work preview")
+                                                +cards("portfolio", "Верстка UI набора", "work-2", "work preview")
+                                                +cards("portfolio", "Верстка интернет магазина", "work-3", "work preview")
+                            .new-posts.content-padding.pt-0
+                                .row.no-margin
+                                    .col-12
+                                        .container
+                                            .main-title-1.main-title--indents Новые записи в \#[a.main-link(href="#!") блоге]
+                                            .posts
+                                                +cards("blog", "Поездка в New York", "post-new-york", "New York")
+                                                +cards("blog", "Что я делал в долине", "post-2", "valley")
+                                                +cards("blog", "Поездка в New York", "post-3", "walk")
+                        include ../sections/_footer.pug

@@ -21,21 +21,22 @@ block content
                     - const language = "ru";
 
                 block content
-                    include ../sections/_admin-panel.pug
-                    include ../sections/_header-admin.pug
-                    main
-                        .about-edit.content-padding
-                            .container
-                                .row.no-margin
-                                    .col-10.offset-1
-                                        h1.about-edit__title Редактировать - Обо мне
-                                        form.about-edit-form(action="#!")
-                                            .about-edit__form-group
-                                                +inputField("text", "Имя, фамилия", "name")(placeholder="Введите имя")
-                                            .about-edit__form-group
-                                                +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 205x205 пикселей, и весом до 2Мб", "upload-file", false, true)(src="../img/blog/preview/mountains.jpg" alt="mountains")
-                                            .about-edit__form-group
-                                                +textarea("info", "Информация на главной")(placeholder="Введите текст...")
-                                            +button("Сохранить", "save", "default", "button")(class="about-edit__button-save" type="submit")
-                                            +button("Отмена", "primary", "default", "button")
-                    include ../sections/_footer.pug
+                    .sticky-footer-wrapper
+                        include ../sections/_admin-panel.pug
+                        include ../sections/_header-admin.pug
+                        main
+                            .about-edit.content-padding
+                                .container
+                                    .row.no-margin
+                                        .col-10.offset-1
+                                            h1.about-edit__title Редактировать - Обо мне
+                                            form.about-edit-form(action="#!")
+                                                .about-edit__form-group
+                                                    +inputField("text", "Имя, фамилия")(placeholder="Введите имя")
+                                                .about-edit__form-group
+                                                    +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 205x205 пикселей, и весом до 2Мб", "upload-file", false, true)(src="../img/blog/preview/mountains.jpg" alt="mountains")
+                                                .about-edit__form-group
+                                                    +textarea("Информация на главной")(placeholder="Введите текст...")
+                                                +button("Сохранить", "save", "default", "button")(class="about-edit__button-save" type="submit")
+                                                +button("Отмена", "primary", "default", "button")
+                        include ../sections/_footer.pug
