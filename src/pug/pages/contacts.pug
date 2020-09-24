@@ -4,9 +4,6 @@ block variables
     - const title = "Контакты";
     - const language = "ru";
 
-block headScripts
-    script(src="https://api-maps.yandex.ru/2.1/?apikey=5dc03896-ed83-44fc-9844-aa04ebfa0c14&lang=ru_RU")
-
 block content
     .sticky-footer-wrapper
         include ../sections/_admin-panel.pug
@@ -60,5 +57,9 @@ block content
                                 .contact-feedback-form-field
                                     +uploadFile("Прикрепить файл", "jpg, png, pdf, doc, весом до 2Мб.", "contacts-files", "input-file-mark--round", true)
                                 +button("Отправить", "save", "default", "button")
-            .map#map
+            .map-container
+                .loader.loader-default
+                .ya-map#map-yandex
         include ../sections/_footer.pug
+        block footScripts
+            script(src="./js/map.js")
