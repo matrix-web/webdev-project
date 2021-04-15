@@ -1,0 +1,83 @@
+$white: #fff;
+$colorDark: #222;
+
+.about--no-border {
+    border: none;
+}
+
+.about-content__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.technologies {
+    background-color: $colorDark;
+}
+
+.technologies-head {
+    position: relative;
+}
+
+.technologies-head__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.technologies__title {
+    font-size: 1.75rem;
+    color: $white;
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+.technologies__title--indents {
+    margin-bottom: 11px;
+}
+
+.technologies__subtitle {
+    color: $white;
+    line-height: 1.2;
+}
+
+.indicators-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.indicators-group__title {
+    color: $white !important;
+}
+
+.experience-head {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.experience-head__title {
+    font-size: 1.75rem;
+    color: $colorDark;
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+.experience-head__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.experience-info__range {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: rgba(0, 0, 0, 0.502);
+    line-height: 1.5;
+}
+
+.experience-info--indents {
+    margin-bottom: 40px;
+}

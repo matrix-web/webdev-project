@@ -1,0 +1,45 @@
+.login {
+    @include auth;
+}
+
+.login-head {
+    @include authHead;
+}
+
+.login-logo {
+    @include authLogo;
+}
+
+.login-link {
+    @include authLink;
+    @include transition;
+}
+
+.login-form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    @include authForm;
+}
+
+.login-form__title {
+    @include authFormTitle;
+}
+
+.login-form-field {
+    @include authFormField;
+}
+
+.login-form__button-login {
+    margin-top: 13px;
+}
+
+.login-form__checkbox {
+    color: $white;
+}
+
+.login-foot {
+    @include authFoot;
+}

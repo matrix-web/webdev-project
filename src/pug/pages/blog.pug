@@ -1,0 +1,40 @@
+extends ../layouts/page_layout/page.pug
+
+block variables
+    - const title = "Блог";
+    - const language = "ru";
+
+block content
+    .sticky-footer-wrapper
+        include ../sections/_admin-panel.pug
+        include ../sections/_header-admin.pug
+        main
+            .blog.content-padding
+                .container
+                    .row.no-margin
+                        .col-12
+                            .blog-head
+                                h1.blog-head__title Блог веб-разработчика
+                                +button("Добавить пост", "edit", "default", "link")
+                            .row.no-margin.blog__row
+                                .col-4.blog__col
+                                    +cards("blog", "Поездка в New York", "post-1", "post-1")
+                                .col-4.blog__col
+                                    +cards("blog", "Что я делал в долине", "post-2", "post-2")
+                                .col-4.blog__col
+                                    +cards("blog", "Как я ходил в поход этим летом", "post-3", "post-3")
+                            .row.no-margin.blog__row
+                                .col-4.blog__col
+                                    +cards("blog", "Поездка в New York пример длинного названия поста ...", "post-1", "post-1")
+                                .col-4.blog__col
+                                    +cards("blog", "Что я делал в долине", "post-2", "post-2")
+                                .col-4.blog__col
+                                    +cards("blog", "Как я ходил в поход этим летом", "post-4", "post-4")
+                            .row.no-margin.blog__row
+                                .col-4.blog__col
+                                    +cards("blog", "Поездка в New York", "post-1", "post-1")
+                                .col-4.blog__col
+                                    +cards("blog", "Что я делал в долине", "post-2", "post-2")
+                                .col-4.blog__col
+                                    +cards("blog", "Как я ходил в поход этим летом", "post-3", "post-3")
+        include ../sections/_footer.pug

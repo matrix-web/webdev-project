@@ -1,0 +1,5 @@
+mixin logo(title, subtitle, iconModifier = "")
+    .logo&attributes(attributes)
+        span.logo__icon #[i.far.fa-paper-plane]
+        | #{title}
+        span.logo__subtitle(class=iconModifier) #{subtitle}

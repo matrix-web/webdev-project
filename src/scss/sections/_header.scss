@@ -1,0 +1,87 @@
+.header {
+    background-color: rgba(0, 88, 139, .75);
+    height: 200px;
+    background-image: url("../../img/bg/header-bg.png");
+    background-position: center -440px;
+    background-size: cover;
+    padding: 42px 50px 35px;
+
+    a {
+        @include transition;
+        line-height: 1.33;
+        text-decoration: underline;
+        color: $white;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-links {
+
+    a {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-right: 25px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.header-profile {
+    display: flex;
+}
+
+.header-profile-user {
+    margin-left: 16px;
+}
+
+.header-profile-user__name {
+    color: $white;
+    font-weight: 900;
+    line-height: 1.375;
+}
+
+.header-profile-user__access {
+    margin-bottom: 10px;
+    font-size: .8125rem;
+    color: rgba(255, 255, 255, 0.502);
+    line-height: 1.2;
+}
+
+.header-profile-user__button {
+    background-color: rgba(0, 0, 0, .251);
+    margin-right: 6px;
+
+    &:hover,
+    &:focus {
+        background-color: rgba(44, 44, 44, 0.251);
+    }
+
+    &:active {
+        background-color: #225979;
+    }
+}
+
+.header-nav {
+    margin-top: 27px;
+    margin-left: 49px;
+
+    a {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-right: 45px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

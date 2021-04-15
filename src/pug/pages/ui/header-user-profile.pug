@@ -1,0 +1,37 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Шапка гость - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Шапка гость
+            
+            .section-ui
+                include ../../sections/_header-user-profile.pug
+            pre.
+                include ../sections/_header-user-profile.pug
+            
+            .title sections/_header-user-profile.pug
+            pre.
+                header.header
+                    .header-wrapper
+                        .header-logo
+                            span.header-logo__icon \#[i.far.fa-paper-plane]
+                            | Digital LifeStyle
+                            span.header-logo__subtitle Сайт IT специалиста
+                        .header-profile
+                            +avatar("avatar-small", "small")(alt="Емельян Казаков")
+                            .header-profile-user
+                                .header-profile-user__name Емельян Казаков
+                                .header-profile-user__access Пользователь
+                                +button('Профиль', 'profile', 'default', 'button')(class="header-profile-user__button")
+                                +button('Выход', 'profile', 'default', 'button')(class="header-profile-user__button")
+                    nav.header-nav
+                            a(href="#!") Главная
+                            a(href="#!") Обо мне
+                            a(href="#!") Работы
+                            a(href="#!") Блог
+                            a(href="#!") Контакты

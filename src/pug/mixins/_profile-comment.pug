@@ -1,0 +1,8 @@
+mixin profileComment(title, date)
+    .profile-comment&attributes(attributes)
+        .profile-comment-head
+            a(href="#!") #{title}
+            span.profile-comment__date #[i.far.fa-clock.profile-comment__icon] #[span #{date}]
+        .profile-comment-text
+            if (block)
+                block

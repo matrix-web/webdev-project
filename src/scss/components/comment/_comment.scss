@@ -1,0 +1,88 @@
+.comment {
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #eef0f2;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.comment-wrapper {
+    display: flex;
+}
+
+.comment-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+.comment__avatar {
+    flex: 48px 0 0;
+}
+
+.comment__icon {
+    margin-right: 6px;
+}
+
+.comment-info__name {
+    color: #3a3a3a;
+    font-weight: 900;
+    line-height: 1.375;
+}
+
+.comment-info__date {
+    margin-left: 15px;
+    font-size: .875rem;
+    color: #9a9a9a;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.comment-info__text {
+    color: #3a3a3a;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.profile-comment {
+    border-radius: 6px;
+    background-color: #eef0f2;
+    padding: 18px 20px;
+}
+
+.profile-comment-head {
+    margin-bottom: 6px;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.profile-comment__date {
+    font-size: .875rem;
+    color: #9b9b9b;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.profile-comment__icon {
+    padding-right: 8px;
+}
+
+.profile-comment-text {
+    color: #383737;
+    line-height: 1.5;
+}
+
+.profile-comment--indents {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

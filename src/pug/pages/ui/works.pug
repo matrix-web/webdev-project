@@ -1,0 +1,57 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Работы - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Работы
+            
+            .section-ui
+                a(href="../works.html" target="_blank") Работы
+            
+            .title pages/works.pug
+            pre.
+                extends ../layouts/page_layout/page.pug
+
+                block variables
+                    - const title = "Работы";
+                    - const language = "ru";
+
+                block content
+                    .sticky-footer-wrapper
+                        include ../sections/_admin-panel.pug
+                        include ../sections/_header-admin.pug
+                        main
+                            .portfolio.content-padding
+                                .container
+                                    .row.no-margin
+                                        .col-12
+                                            .portfolio-head
+                                                h1.portfolio__title \#[span Работы] которые сделал я и моя команда
+                                                +button("Добавить работу", "edit", "default", "link")(class="portfolio__button")
+                                            .portfolio-preview
+                                                .row.portfolio-preview__row
+                                                    .col-4
+                                                        +cards("portfolio", "Верстка Landing Page", "portfolio-1", "Landing page")
+                                                    .col-4
+                                                        +cards("portfolio", "Верстка UI-набора", "work-2", "ui набор")
+                                                    .col-4
+                                                        +cards("portfolio", "Верстка Интернет магазина", "work-3", "интернет магазин")
+                                                .row.portfolio-preview__row
+                                                    .col-4
+                                                        +cards("portfolio", "Верстка Landing Page", "portfolio-1", "Landing page")
+                                                    .col-4
+                                                        +cards("portfolio", "Верстка UI-набора", "work-2", "ui набор")
+                                                    .col-4
+                                                        +cards("portfolio", "Верстка Интернет магазина", "work-3", "интернет магазин")
+                                                .row
+                                                    .col-4
+                                                        +cards("portfolio", "Верстка Landing Page", "portfolio-1", "Landing page")
+                                                    .col-4
+                                                        +cards("portfolio", "Верстка UI-набора", "work-2", "ui набор")
+                                                    .col-4
+                                                        +cards("portfolio", "Верстка Интернет магазина", "work-3", "интернет магазин")
+                        include ../sections/_footer.pug

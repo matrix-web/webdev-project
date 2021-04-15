@@ -1,0 +1,28 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Сообщение от пользователя - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Сообщение от пользователя
+            
+            .section-ui
+                include ../../sections/_user-message.pug
+            pre.
+                include ../sections/_user-message.pug
+            
+            .title sections/_user-message.pug
+            pre.
+                .user-message
+                    .user-message-head
+                        .user-message-head-info
+                            span.user-message-head-info__date 22 августа 2017
+                            .user-message-head-info__name Джон До \#[a.user-message__link.user-message__link--no-underline(href="#!") johndoe@gmail.com]
+                        +button('Удалить', 'delete', 'small', 'button')(class="user-message--button-position")
+                    .user-message-content.user-content
+                        p Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.
+                    .user-message-foot
+                        p Прикрепленные файлы: \#[a.user-message__link(href="#") Avrora-platform.pdf]

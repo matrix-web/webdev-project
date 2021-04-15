@@ -1,0 +1,41 @@
+$backgroundBadge: #a0cce5;
+$badgeFocusHover: #8dcff5;
+$badgeActive: #6fb6df;
+$white: #fff;
+
+.badge {
+    display: inline-block;
+    border-radius: 20px;
+    background-color: $backgroundBadge;
+    padding: 5.5px 15px;
+
+    font-family: $baseFont;
+    font-size: .8125rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: $white;
+    cursor: pointer;
+    @include transition;
+
+    &:hover,
+    &:focus {
+        background-color: $badgeFocusHover;
+        color: $white;
+    }
+
+    &:active {
+        background-color: $badgeActive;
+    }
+}
+
+.badge--link {
+    text-decoration: none;
+}
+
+.badge--button {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,31 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Шапка администратор - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Шапка администратор
+            
+            .section-ui
+                include ../../sections/_header-admin.pug
+            pre.
+                include ../sections/_header-admin.pug
+            
+            .title sections/_header-admin.pug
+
+            pre.
+                header.header
+                    .header-wrapper
+                        .header-logo
+                            span.header-logo__icon \#[i.far.fa-paper-plane]
+                            | Digital LifeStyle
+                            span.header-logo__subtitle Сайт IT специалиста
+                    nav.header-nav
+                        a(href="#!") Главная
+                        a(href="#!") Обо мне
+                        a(href="#!") Работы
+                        a(href="#!") Блог
+                        a(href="#!") Контакты

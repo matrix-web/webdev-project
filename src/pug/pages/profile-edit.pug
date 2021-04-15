@@ -1,0 +1,35 @@
+extends ../layouts/page_layout/page.pug
+
+block variables
+    - const title = "Профиль редактировать";
+    - const language = "ru";
+
+block content
+    .sticky-footer-wrapper
+        include ../sections/_header-user-profile.pug
+        .profile-edit.content-padding
+            .container
+                .row.no-margin
+                    .col-10.offset-1
+                        h1.profile-edit__title Редактировать профиль
+                .row.no-margin
+                    .col-4.offset-1
+                        form.profile-edit-form(action="#!")
+                            .profile-edit-form-field
+                                +inputField("text", "Имя")(placeholder="Введите имя")
+                            .profile-edit-form-field
+                                +inputField("text", "Фамилия")(placeholder="Введите фамилию")
+                            .profile-edit-form-field
+                                +inputField("email", "Email")(placeholder="Введите email")
+                .row.no-margin.profile-edit__row
+                    .col-8.offset-1
+                        +uploadFile("Фотография", "Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.", "user-files", "")
+                .row.no-margin
+                    .col-4.offset-1
+                        .profile-edit-form-field
+                            +inputField("text", "Страна")(placeholder="Введите страну")
+                        .profile-edit-form-field
+                            +inputField("text", "Город")(placeholder="Введите город")
+                        +button("Сохранить", "save", "default", "button")(class="profile-edit__button-save")
+                        +button("Подробнее", "primary", "default", "button")
+        include ../sections/_footer.pug

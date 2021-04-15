@@ -1,0 +1,16 @@
+header.header
+    .header-wrapper
+        +logo("Digital LifeStyle", "Сайт IT специалиста")
+        .header-profile
+            +avatar("avatar-small", "small")(alt="Емельян Казаков")
+            .header-profile-user
+                .header-profile-user__name Емельян Казаков
+                .header-profile-user__access Пользователь
+                +button('Профиль', 'profile', 'default', 'button')(class="header-profile-user__button")
+                +button('Выход', 'profile', 'default', 'button')(class="header-profile-user__button")
+    nav.header-nav
+            a(href="#!") Главная
+            a(href="#!") Обо мне
+            a(href="#!") Работы
+            a(href="#!") Блог
+            a(href="#!") Контакты

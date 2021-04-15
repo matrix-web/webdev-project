@@ -1,0 +1,24 @@
+extends ../layouts/page_layout/page.pug
+
+block variables
+    - const title = "Пост в блоге";
+    - const language = "ru";
+
+block content
+    .sticky-footer-wrapper
+        include ../sections/_admin-panel.pug
+        include ../sections/_header-admin.pug
+        main
+            .post.content-padding
+                .container
+                    .row.no-margin
+                        .col-10.offset-1
+                            include ../sections/_blog-post.pug
+                            .comments
+                                h2.comments__title 2 комментария
+                                +comment("user-1", "small", "comment__avatar", "Джон До", "05 Мая 2019 года в 15:45", "John Doe")
+                                    | Замечательный парк, обязательно отправлюсь туда этим летом
+                                +comment("user-2", "small", "comment__avatar", "Джон До", "05 Мая 2019 года в 15:45", "John Doe")
+                                    | Замечательный парк, обязательно отправлюсь туда этим летом
+                            include ../sections/_leave-comment.pug
+        include ../sections/_footer.pug

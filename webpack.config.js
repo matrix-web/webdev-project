@@ -1,6 +1,8 @@
 module.exports = {
     entry: {
-        main: './src/js/index'
+        ui: './src/js/ui',
+        main: './src/js/index',
+        map: './src/js/map'
     },
     output: {
         filename: '[name].js',

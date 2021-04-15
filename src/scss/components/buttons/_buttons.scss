@@ -1,21 +1,55 @@
-$buttonColor: $white;
+$white: #fff;
 
 .button {
-    @include transition;
     display: inline-block;
-    height: 44px;
-    border-radius: 22px;
-    background-color: #bbc7d3;
-    outline: none;
     text-decoration: none;
-    cursor: pointer;
-    padding: .875em 1.25em .8125em;
-
-    color: $white;
-    font-family: $baseFont;
+    border: none;
+    border-radius: 30px;
+    border-width: 2px;
     font-size: 1rem;
-    font-weight: 600;
-    line-height: 1;
+    color: #037ec6;
+    font-family: $baseFont;
+    font-weight: 700;
+    padding: 8.5px 26.04px;
+    line-height: 1.2;
+    cursor: pointer;
+    @include transition;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        color: $white;
+    }
+}
+
+.button__icon {
+    font-size: .9rem;
+    line-height: 1.2rem;
+}
+
+.button__icon--small {
+    font-size: .7rem;
+    line-height: 1rem;
+}
+
+.button__icon--position-right {
+    float: right;
+    margin-left: 5px;
+}
+
+.button__icon--position-left {
+    float: left;
+    margin-right: 5px;
+}
+
+.button--small {
+    font-size: .875rem;
+    padding: 5px 21px !important;
+}
+
+.button--primary {
+    border: 2px solid #dde8ee;
+    background-color: #fff;
 
     &:hover,
     &:focus {
@@ -27,15 +61,81 @@ $buttonColor: $white;
     }
 }
 
-.button--primary {
-    background-color: $blue;
+.button--secondary {
+    @include button-paddings;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 6px 16px 0px rgba(23, 50, 66, 0.75);
 
     &:hover,
     &:focus {
-        background-color: #1b9ce7;
+        background-color: #037ec6;
+        color: $white;
     }
 
     &:active {
-        background-color: #0067a3;
+        background-color: #006ba9;
+        color: $white;
+    }
+}
+
+.button--edit {    
+    @include button-paddings;
+    background-color: #ffba00;
+    color: $white;
+
+    &:hover,
+    &:focus {
+        background-color: #ffcf3e;
+    }
+
+    &:active {
+        background-color: #f29a00;
+    }
+}
+
+.button--delete {
+    @include button-paddings;
+    background-color: #b51919;
+    color: $white;
+
+    &:hover,
+    &:focus {
+        background-color: #e70c0c;
+    }
+
+    &:active {
+        background-color: #990101;
+    }
+}
+
+.button--save {
+    @include button-paddings;
+    background-color: #037ec6;
+    color: $white;
+
+    &:hover,
+    &:focus {
+        background-color: #0094eb;
+    }
+
+    &:active {
+        background-color: #0069a7;
+    }
+}
+
+.button--profile {
+    background-color: rgba(191, 191, 191, .251);
+    font-size: .8125rem;
+    color: $white;
+    font-weight: 400;
+    padding: 7px 15px;
+
+    &:hover,
+    &:focus {
+        background-color: #999;
+    }
+
+    &:active {
+        background-color: #666;
     }
 }

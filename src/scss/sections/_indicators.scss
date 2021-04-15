@@ -1,0 +1,19 @@
+.indicators {
+    background-color: #222;
+}
+
+.indicators--indents {
+    margin-top: 50px;
+}
+
+.indicators__indicator {
+    margin-right: 50px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.indicators__row {
+    margin-bottom: 40px;
+}

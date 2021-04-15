@@ -1,0 +1,42 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Добавить пост - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Добавить пост
+            
+            .section-ui
+                a(href="../add-post.html" target="_blank") Добавить пост
+            
+            .title pages/add-post.pug
+            pre.
+                extends ../layouts/page_layout/page.pug
+
+                block variables
+                    - const title = "Добавить пост";
+                    - const language = "ru";
+
+                block content
+                    .sticky-footer-wrapper
+                        include ../sections/_admin-panel.pug
+                        include ../sections/_header-admin.pug
+                        main
+                            .add-post.content-padding
+                                .container
+                                    .row.no-margin
+                                        .col-10.offset-1
+                                            h1.add-post__title Добавить пост
+                                            form.add-post-form(action="#!")
+                                                .add-post-form-field
+                                                    +inputField("text", "Название")(placeholder="Введите имя")
+                                                .add-post-form-field
+                                                    +uploadFile("Изображение", "Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.", "upload-post-files")
+                                                .add-post-form-field
+                                                    +textarea("Содержание")(placeholder="Введите описание")
+                                                +button("Сохранить", "save", "default", "button")(class="add-post__button-save")
+                                                +button("Отмена", "primary", "default", "button")
+                        include ../sections/_footer.pug

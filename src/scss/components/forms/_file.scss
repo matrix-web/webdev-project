@@ -1,0 +1,36 @@
+.input-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.input-file + .input-file-mark {
+    display: inline-block;
+    background-color: #b1bfc7;
+    color: $white;
+    border-radius: 4px;
+    padding: 13px 10px;
+    cursor: pointer;
+}
+
+
+.input-file:focus + .input-file-mark,
+.input-file + .input-file-mark:hover {
+    background-color: #1e6791;
+}
+
+.input-file + .input-file-mark--round {
+    padding: 10px 16px; 
+    border-radius: 20px;
+}
+
+.input-file + .input-file-mark + span {
+    color: #8e9ba2;
+    vertical-align: top;
+    padding: 14px 0 0 7px;
+    display: inline-block;
+    font-weight: 400;
+}

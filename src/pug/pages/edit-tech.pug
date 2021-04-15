@@ -1,0 +1,55 @@
+extends ../layouts/page_layout/page.pug
+
+block variables
+    - const title = "Редактировать технологии";
+    - const language = "ru";
+
+block content
+    .sticky-footer-wrapper
+        include ../sections/_admin-panel.pug
+        include ../sections/_header-admin.pug
+        main
+            .edit-tech.content-padding
+                .container
+                    .row.no-margin
+                        .col-10.offset-1
+                            h1.edit-tech__title Редактировать - Технологии
+                            form.tech-form(action="#!")
+                                .row.no-margin.edit-tech__row
+                                    .col-2.tech-form__col
+                                        +inputField("number", "HTML5")(class="tech-form__field" min="0" max="100" value="0")
+                                        span %
+                                    .col-2.tech-form__col
+                                        +inputField("number", "CSS3")(class="tech-form__field" min="0" max="100" value="0")
+                                        span %
+                                    .col-2.tech-form__col
+                                        +inputField("number", "JS")(class="tech-form__field" min="0" max="100" value="0")
+                                        span %
+                                    .col-2.tech-form__col
+                                        +inputField("number", "jQuery")(class="tech-form__field" min="0" max="100" value="0")
+                                        span %
+                                .row.no-margin.edit-tech__row
+                                    .col-2.tech-form__col
+                                        +inputField("number", "PHP")(class="tech-form__field" min="0" max="100" value="0")
+                                        span %
+                                    .col-2.tech-form__col
+                                        +inputField("number", "MySQL")(class="tech-form__field" min="0" max="100" value="0")
+                                        span %
+                                .row.no-margin.edit-tech__row
+                                    .col-2.tech-form__col
+                                        +inputField("number", "Git")(class="tech-form__field" min="0" max="100" value="0")
+                                        span %
+                                    .col-2.tech-form__col
+                                        +inputField("number", "Gulp")(class="tech-form__field" min="0" max="100" value="0")
+                                        span %
+                                    .col-2.tech-form__col
+                                        +inputField("number", "Bower")(class="tech-form__field" min="0" max="100" value="0")
+                                        span %
+                                    .col-2.tech-form__col
+                                        +inputField("number", "Webpack")(class="tech-form__field" min="0" max="100" value="0")
+                                        span %
+                                .row.no-margin
+                                    .col-4.pl-0.pr-0
+                                        +button('Сохранить', 'save', 'default', 'button')(class="tech-form__button-save" type="submit")
+                                        +button('Отмена', 'primary', 'default', 'button')
+        include ../sections/_footer.pug

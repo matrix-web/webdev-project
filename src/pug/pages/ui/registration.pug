@@ -1,0 +1,45 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Регистрация - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Регистрация
+            
+            .section-ui
+                a(href="../registration.html" target="_blank") Регистрация
+            
+            .title pages/registration.pug
+            pre.
+                extends ../layouts/page_layout/page.pug
+
+                block variables
+                    - const title = "Регистрация";
+                    - const language = "ru";
+
+                block content
+                    .registration
+                        .registration-head
+                            .registration-logo
+                                span.registration-logo__icon \#[i.far.fa-paper-plane]
+                                | Супер Сайт
+                            a.registration-link(href="#!") Регистрация
+                        .row.no-margin
+                            .col-12
+                                .registration-form-wrapper
+                                    form.registration-form(action="#!")
+                                        h1.registration-form__title Регистрация
+                                        +notification("Данный email уже занят.", "error", true)
+                                        .notification-description
+                                            p Используйте другой email чтобы создать новый аккаунт.
+                                            p Или воспользуйтесь \#[a(href="#!") восстановлением пароля], чтобы войти на сайт.
+                                        .registration-form-field
+                                            +inputField("email")(name="registration-email" placeholder="Email")
+                                        .registration-form-field
+                                            +inputField("password")(name="registration-password" placeholder="Пароль")
+                                        +button("Регистрация", "secondary", "default", "button")(name="login" class="registration-form__button-registration")
+                        .registration-foot
+                            p © Емельян Казаков 2020

@@ -1,0 +1,26 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Опыт работы - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Опыт работы
+            
+            .section-ui
+                +workExp("февраль 2017  — по настоящее время", "Frontend разработчик, Вконтактe, mail.ru group")
+                    p Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
+            pre.
+                +workExp("февраль 2017  — по настоящее время", "Frontend разработчик, Вконтактe, mail.ru group")
+                    p Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
+            
+            .title mixins/_work-exp.pug
+            pre.
+                mixin workExp(range, title)
+                    .experience-info.user-content&attributes(attributes)
+                        span.experience-info__range \#{range}
+                        h4 \#{title}
+                        if (block)
+                            block

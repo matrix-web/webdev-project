@@ -5,7 +5,9 @@ doctype html
 html(lang=language)
     head
         include ./_head.pug
-    body
+        block headScripts
+    body(class=(pageClass != "") ? pageClass : "")
         block content
 
         include ./_foot.pug
+        block footScripts

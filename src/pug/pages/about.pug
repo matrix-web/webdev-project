@@ -1,0 +1,50 @@
+extends ../layouts/page_layout/page.pug
+
+block variables
+    - const title = "Обо мне";
+    - const language = "ru";
+
+block content
+    .sticky-footer-wrapper
+        include ../sections/_admin-panel.pug
+        include ../sections/_header-admin.pug
+        .about.content-padding.about--no-border
+            .row.no-margin
+                .col-12
+                    .container
+                        .about-wrapper
+                            +avatar("avatar", "big", "about__avatar")(alt="Емельян Казаков")
+                            .user-content
+                                .about-content
+                                    h1 Емельян Казаков
+                                    p Я веб разработчик из Казани. Мне 28 лет. #[br] Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                                    p Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. #[br] Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                                    +button('Редактировать', 'edit', 'default', 'link')(class="about-content__button")
+                                .about-skiils
+                                    h3 Что я умею
+                                    p Меня привлекет Frontend разработка, это не только моя работа, но и хобби. #[br]Также знаком и могу решать не сложные задачи на Backend.
+                                    p Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+        .technologies.content-padding
+            .container
+                .row.no-margin
+                    .col-9.offset-3
+                        .technologies-head
+                            .technologies__title.technologies__title--indents Технологии
+                            p.technologies__subtitle Которые использую в работе
+                            +button('Редактировать', 'edit', 'default', 'link')(class="technologies-head__button")
+                include ../sections/_indicators.pug
+        .experience.content-padding
+            .container
+                .row
+                    .col-9.offset-3
+                        .experience-head
+                            .experience-head__title Опыт работы
+                            +button('Редактировать', 'edit', 'default', 'link')(class="experience-head__button")
+                        .experience-content
+                            +workExp("февраль 2017  — по настоящее время", "Frontend разработчик, Вконтактe, mail.ru group")(class="experience-info--indents")
+                                p Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
+                            +workExp("сентябрь 2015 — январь 2017", "Разработчик интерфейсов, Яндекс")(class="experience-info--indents")
+                                p Работы в проекте Яндекс Музыка. Создание новых разделов сервиса. Оптимизация и создание новых компонентов платформы.
+                            +workExp("март 2013 — август 2015", "Веб-разработчик, Cloud studio")
+                                p Frontend и Backend для клиентских проектов студии. Работа над студийной CMS для интернет магазинов. Участие в разработке CRM системы “Sky CRM”. Стек используемых технологий: Git, JS, Angular.
+        include ../sections/_footer.pug

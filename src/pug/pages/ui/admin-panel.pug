@@ -1,0 +1,32 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Админ панель - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Админ панель
+            
+            .section-ui
+                include ../../sections/_admin-panel.pug
+            pre.
+                include ../sections/_admin-panel.pug
+            
+            .title sections/_admin-panel.pug
+            pre.
+                .admin-panel
+                    .admin-panel-user
+                        +avatar("avatar-small", "small")(alt="Емельян Казаков")
+                        .admin-panel-user-info
+                            .admin-panel-user-info__name Емельян Казаков
+                            +badge('link', 'Пользователь')(class="badge--link")
+                    .admin-panel-nav
+                        a(href="#!") \#[span.admin-pane-nav__icon \#[i.fas.fa-plus-circle]] Пост
+                        a(href="#!") \#[span.admin-pane-nav__icon \#[i.fas.fa-plus-circle]] Работу
+                        a(href="#!") \#[span.admin-pane-nav__icon \#[i.far.fa-edit]] Обо мне
+                        a(href="#!") \#[span.admin-pane-nav__icon \#[i.far.fa-edit]] Контакты
+                        a(href="#!") \#[span.admin-pane-nav__icon \#[i.fas.fa-envelope]] Сообщения
+                    .admin-panel-exit
+                        a(href="#!") \#[i.fas.fa-sign-out-alt] Выход

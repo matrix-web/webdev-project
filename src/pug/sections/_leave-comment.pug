@@ -1,0 +1,9 @@
+.title-2.title-2--indents Оставить комментарий
+.leave-comment
+    .leave-comment-wrapper
+        +avatar('avatar-small', 'small')(alt="avatar small")
+        form.leave-comment-form(action="#!")
+            span.leave-comment-form__name Емельян Казаков
+            +notification("Комментарий не может быть пустым.", "error")(class="leave-comment-form__notification")
+            +textarea("Комментарий")(class="leave-comment-form__textarea")
+            +button("Опубликовать", "primary", "default", "button")(type="submit")

@@ -1,0 +1,62 @@
+$white: #fff;
+$borderColor: #999;
+$infoColor: #38505e;
+$bgcDescription: #e0e9ee;
+
+.notification {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: $white;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.notification-description {
+    width: 100%;
+    padding: 15px;
+    background-color: $bgcDescription;
+    text-align: left;
+
+    p {
+        color: $infoColor !important;
+        line-height: 1.5 !important;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            @include transition;
+            color: $infoColor !important;
+        
+            &:hover,
+            &:focus {
+                color: #5b8fad !important;
+            }
+        
+            &:active {
+                color: #21516d !important;
+            }
+        }
+    }    
+}
+
+.notification--top-rounded {
+    border-radius: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.notification--success {
+    background-image: linear-gradient(0deg, rgb(8,113,28) 0%, rgb(44,185,81) 100%);
+}
+
+.notification--error {
+    background-image: linear-gradient(0deg, rgb(151,21,21) 0%, rgb(201,50,50) 100%);
+}
+
+.notification--info {
+    background-image: linear-gradient(0deg, rgb(61,122,160) 0%, rgb(138,187,218) 100%);
+}

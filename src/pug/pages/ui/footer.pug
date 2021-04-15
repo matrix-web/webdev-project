@@ -1,0 +1,38 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - const titlePage = 'Подвал - UI-kit и HTML фреймворк - Документация';
+    - const pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Подвал
+
+            .section-ui
+                include ../../sections/_footer.pug
+            pre.
+                include ../sections/_footer.pug
+            
+            .title sections/_footer.pug
+            pre.
+                footer.footer.content-padding
+                    .row.footer__row
+                        .col-3.offset-1
+                            .footer-copyright
+                                p © Емельян Казаков
+                                p 2020 All rights reserved
+                        .col-3
+                            .footer-nav
+                                a(href="#") Главная
+                                a(href="#") Обо мне
+                                a(href="#") Работы
+                                a(href="#") Блог
+                                a(href="#") Контакты
+                        .col-5
+                            .footer-social
+                                a(href="#!") \#[i.fab.fa-vk]
+                                a(href="#!") \#[i.fab.fa-twitter]
+                                a(href="#!") \#[i.fab.fa-youtube]
+                                a(href="#!") \#[i.fab.fa-instagram]
+                                a(href="#!") \#[i.fab.fa-facebook-f]
